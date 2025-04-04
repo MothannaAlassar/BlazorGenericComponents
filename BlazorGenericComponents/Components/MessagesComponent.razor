@@ -1,0 +1,61 @@
+﻿
+
+@if (MessageType == MessageType.Warning)
+{
+    if (showAlert)
+    {
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Warning!</strong> @Message
+            <button type="button" class="close" aria-label="Close" @onclick="DismissAlert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+}
+else if (MessageType == MessageType.Error)
+{
+    if (showAlert)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Error!</strong> @Message
+            <button type="button" class="close" aria-label="Close" @onclick="DismissAlert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+}
+else if (MessageType == MessageType.Success)
+{
+    if (showAlert)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Success!</strong> @Message
+            <button type="button" class="close" aria-label="Close" @onclick="DismissAlert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+}
+else
+{
+    if (showAlert)
+    {
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <strong>Info!</strong> @Message
+            <button type="button" class="close" aria-label="Close" @onclick="DismissAlert">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    }
+}
+@code {
+    [Parameter] public string Message { get; set; }
+    [Parameter] public MessageType MessageType { get; set; }
+
+    private bool showAlert = true;
+
+    private void DismissAlert()
+    {
+        showAlert = false;
+    }
+}

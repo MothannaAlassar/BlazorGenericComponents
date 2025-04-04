@@ -1,0 +1,54 @@
+﻿@inherits BaseComponent
+@inject IJSRuntime JSRuntime
+
+<canvas id="myChart_@ChartType" width="auto" height="auto"></canvas>
+<style>
+    .chart-canvas {
+        /*width: 100%;*/ /* Full width */
+        /*height: 400px;*/ /* Fixed height */
+        /*max-width: 600px;*/ /* Optional max width */
+        display: block;
+        box-sizing: border-box;
+        height: 400px; 
+        /*width: 792px;*/
+    }
+</style>
+@code {
+    [Parameter] public string ChartType { get; set; } = "bar";
+    [Parameter] public string ChartTitle { get; set; } = "";
+    [Parameter] public List<ViewModels.ChartViewModel> Data { get; set; } = new List<ViewModels.ChartViewModel>();
+    //private string[] backgroundColors = {
+    //    "rgba(255, 99, 132, 0.2)", // Color for the first bar
+    //    "rgba(54, 162, 235, 0.2)", // Color for the second bar
+    //    "rgba(255, 206, 86, 0.2)", // Color for the third bar
+    //    "rgba(75, 192, 192, 0.2)", // Color for the fourth bar
+    //    "rgba(153, 102, 255, 0.2)" // Color for the fifth bar
+    //};
+    //private string[] labels = { "January", "February", "March", "April", "May" };
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            try
+            {
+                if (Data != null && Data.Count > 0)
+                {
+                    //int cnt = 92;
+                    foreach (var d in Data?.Where(a => string.IsNullOrEmpty(a.BackgroundColor)))
+                    {
+                        var r = new Random().Next(99, 255);
+                        d.BackgroundColor = $"rgba(255, {r}, 132, 0.9)";
+                    }
+
+                    await JSRuntime.InvokeVoidAsync("createChart", Data?.Select(a => a.Label)?.ToArray(), Data?.Select(a => a.Value)?.ToArray(), ChartType, Data?.Select(a => a.BackgroundColor)?.ToArray(), ChartTitle);
+                }
+            }
+            catch (Exception ex)
+            {
+                AddErrorLog(ex);
+            }
+
+        }
+    }
+}

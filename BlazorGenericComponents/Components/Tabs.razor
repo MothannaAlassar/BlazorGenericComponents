@@ -1,0 +1,68 @@
+﻿@code {
+    private string _activeTab = "Tab1"; // Default active tab
+
+    private void SetActiveTab(string tab)
+    {
+        _activeTab = tab;
+    }
+
+    public string GetActiveTabClass(string tab)
+    {
+        return _activeTab == tab ? "active" : "";
+    }
+    public class TabViewModel
+    {
+        public string Title { get; set; }
+    }
+    [Parameter] public string DefaultTab { get; set; }
+    [Parameter] public List<TabViewModel> ListTap { get; set; }
+    protected override void OnInitialized()
+    {
+        _activeTab = DefaultTab;
+        base.OnInitialized();
+    }
+    // Define content for each tab
+    private RenderFragment GetTabContent()
+    {
+        return _activeTab switch
+        {
+            "Tab1" => (builder) =>
+            {
+                builder.AddContent(0, "Content for Tab 1.");
+            }
+            ,
+            "Tab2" => (builder) =>
+            {
+                builder.AddContent(1, "Content for Tab 2.");
+            }
+            ,
+            "Tab3" => (builder) =>
+            {
+                builder.AddContent(2, "Content for Tab 3.");
+            }
+            ,
+            _ => (builder) => { }
+        };
+    }
+
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <ul class="Statics-tabs">
+            @if (ListTap != null && ListTap.Count > 0)
+            {
+                foreach (var t in ListTap)
+                {
+                    <li class="@GetActiveTabClass(t.Title)">
+                        <a @onclick="() => SetActiveTab(t.Title)">@t.Title</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>
+
+<div class="tab-content">
+    @GetTabContent()
+</div>

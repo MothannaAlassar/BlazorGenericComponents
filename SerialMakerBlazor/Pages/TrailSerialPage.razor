@@ -1,0 +1,129 @@
+﻿@page "/trailserial-generator"
+@attribute [Authorize]
+@inject Services.EncryptionService EncryptionService // Inject your Encryption service
+
+<div class="container">
+    <h3>Trial Serial Generator</h3>
+    <EditForm Model="generateSerial" OnValidSubmit="GenerateSerial">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="input-group">
+            <label for="inputSerial">Enter Identifier:</label>
+            <input type="password"
+                   id="inputIdentifier"
+                   @bind="generateSerial.Identifier"
+                   placeholder="Enter Identifier" />
+        </div>
+        <div class="input-group">
+            <label for="inputSerial">Enter Serial Number:</label>
+            <input type="text"
+                   id="inputSerial"
+                   @bind="generateSerial.ClientSerial"
+                   @oninput="FormatInput"
+                   placeholder="D99B-D5F7-F091-FF95-B596-D4D7-97D2-B3BE" />
+        </div>
+
+        <button type="submit" class="generate-button">Generate Serial</button>
+
+    </EditForm>
+
+    <div class="input-group">
+        <label for="outputSerial">Generated Serial:</label>
+        <input type="text"
+               id="outputSerial"
+               @bind="generateSerial.GeneratedSerial"
+               disabled="true"
+               placeholder="Generated serial" />
+    </div>
+</div>
+
+<style>
+
+
+    .container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+        input:disabled {
+            background-color: #e9ecef;
+        }
+
+    .generate-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+        .generate-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+@code {
+    private ViewModels.GenerateTrialSerialViewModel generateSerial = new ViewModels.GenerateTrialSerialViewModel { GeneratedSerial = "empty" };
+    private string inputSerial;
+    private string generatedSerial;
+    protected override Task OnInitializedAsync()
+    {
+        return base.OnInitializedAsync();
+    }
+    private void FormatInput(ChangeEventArgs e)
+    {
+        var value = e.Value.ToString().ToUpper();
+
+        // Remove all non-alphanumeric characters
+        value = new string(value.Where(char.IsLetterOrDigit).ToArray());
+
+        // Limit the length to 32 characters (8 groups of 4)
+        if (value.Length > 32)
+        {
+            value = value.Substring(0, 32);
+        }
+
+        // Insert dashes every 4 characters
+        var formattedValue = string.Join("-", Enumerable.Range(0, value.Length / 4)
+            .Select(i => value.Substring(i * 4, Math.Min(4, value.Length - i * 4)))
+            .ToArray());
+
+        // Append any remaining characters
+        if (value.Length % 4 != 0)
+        {
+            formattedValue += "-" + value.Substring(4 * (value.Length / 4));
+        }
+
+        inputSerial = formattedValue;
+    }
+
+    private void GenerateSerial()
+    {
+        var st = inputSerial?.Replace("-", "");
+        generatedSerial = Services.EncryptionService.MakePassword(st, "111"); // Example identifier
+        generateSerial.GeneratedSerial = generatedSerial;
+    }
+}

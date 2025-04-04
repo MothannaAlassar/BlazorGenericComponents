@@ -1,0 +1,110 @@
+﻿@inherits BaseComponent
+@code {
+    [Parameter]
+    public int TotalItems { get; set; }
+
+    [Parameter]
+    public int ItemsPerPage { get; set; } = 10;
+
+    [Parameter]
+    public EventCallback<int> OnPageChanged { get; set; }
+    [Parameter]
+    public int CurrentPage { get; set; } = 1;
+
+    private int TotalPages => (int)Math.Ceiling((double)TotalItems / ItemsPerPage);
+
+    private void ChangePage(int page)
+    {
+        if (page < 1 || page > TotalPages) return;
+        CurrentPage = page;
+        OnPageChanged.InvokeAsync(CurrentPage);
+        StateHasChanged();
+    }
+
+    private IEnumerable<int> GetVisiblePagesOld()
+    {
+        var pages = new List<int>();
+        for (int i = Math.Max(1, CurrentPage - 1); i <= Math.Min(TotalPages, CurrentPage + 1); i++)
+        {
+            pages.Add(i);
+        }
+        return pages;
+    }
+    private IEnumerable<int> GetVisiblePages()
+    {
+        var pages = new List<int>();
+
+        if (TotalPages <= 3)
+        {
+            // If there are only 3 or fewer pages, return all
+            return Enumerable.Range(1, TotalPages);
+        }
+
+        if (CurrentPage == 1)
+        {
+            // If on the first page, show [1, 2, 3]
+            return new List<int> { 1, 2, 3 };
+        }
+
+        if (CurrentPage == TotalPages)
+        {
+            // If on the last page, show [TotalPages - 2, TotalPages - 1, TotalPages]
+            return new List<int> { TotalPages - 2, TotalPages - 1, TotalPages };
+        }
+
+        // Otherwise, return the previous, current, and next page
+        return new List<int> { CurrentPage - 1, CurrentPage, CurrentPage + 1 };
+    }
+}
+
+@*<div class="pagination">
+    <button @onclick="() => ChangePage(1)" disabled="@(CurrentPage == 1)">@Tralnslate?.GetTranslation("First")</button>
+    <button @onclick="() => ChangePage(CurrentPage - 1)" disabled="@(CurrentPage == 1)">@Tralnslate?.GetTranslation("Previous")</button>
+
+    @foreach (var pg in GetVisiblePages())
+    {
+        <button class="@(pg == CurrentPage ? "active" : "")" @onclick="() => ChangePage(pg)">@pg</button>
+    }
+
+    <button @onclick="() => ChangePage(CurrentPage + 1)" disabled="@(CurrentPage == TotalPages)">@Tralnslate?.GetTranslation("Next")</button>
+    <button @onclick="() => ChangePage(TotalPages)" disabled="@(CurrentPage == TotalPages)">@Tralnslate?.GetTranslation("Last")</button>
+
+    <span>@CurrentPage</span>@Tralnslate?.GetTranslation("of") <span>@TotalPages</span>
+</div>*@
+
+<nav aria-label="..." >
+    <ul class="pagination" style="justify-content:center">
+        <li class="page-item" @onclick="() => ChangePage(1)" disabled="@(CurrentPage == 1)">
+            <a class="page-link" tabindex="-1" aria-disabled="true">@Tralnslate?.GetTranslation("First")</a>
+        </li>
+        <li class="page-item" @onclick="() => ChangePage(CurrentPage - 1)" disabled="@(CurrentPage == 1)">
+            <a class="page-link" tabindex="-1" aria-disabled="true">@Tralnslate?.GetTranslation("Previous")</a>
+        </li>
+        @foreach (var pg in GetVisiblePages())
+        {
+
+            <li class="page-item @(pg == CurrentPage ? "active" : "")" aria-current="page" @onclick="() => ChangePage(pg)">
+                <a class="page-link">@pg <span class="@(pg == CurrentPage ? "sr-only" : "")"></span></a>
+            </li>
+        }
+
+        @*<li class="page-item" @onclick="() => ChangePage(CurrentPage + 1)" disabled="@((CurrentPage == TotalPages)?true:false))" aria-current="page">
+            <a class="page-link">@Tralnslate?.GetTranslation("Next")</a>
+        </li>
+        <li class="page-item" @onclick="() => ChangePage(TotalPages)" disabled="@((CurrentPage == TotalPages)?true:false)" aria-current="page">
+            <a class="page-link">@Tralnslate?.GetTranslation("Last")</a>
+        </li>*@
+
+        <li class="page-item" @onclick="() => ChangePage(CurrentPage + 1)" disabled="@((CurrentPage == TotalPages)?true:false))">
+            <a class="page-link" tabindex="-1" aria-disabled="true">@Tralnslate?.GetTranslation("Next")</a>
+        </li>
+        <li class="page-item" @onclick="() => ChangePage(TotalPages)" disabled="@((CurrentPage == TotalPages)?true:false)">
+            <a class="page-link" tabindex="-1" aria-disabled="true">@Tralnslate?.GetTranslation("Last")</a>
+        </li>
+
+        <li class="page-item">
+            <a class="page-link"><span>@CurrentPage</span>@Tralnslate?.GetTranslation("of") <span>@TotalPages</span></a>
+
+        </li>
+    </ul>
+</nav>

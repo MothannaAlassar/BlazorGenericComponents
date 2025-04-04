@@ -1,0 +1,25 @@
+﻿@inject NavigationManager Navigation
+
+@code {
+
+
+    protected override void OnInitialized()
+    {
+        try
+        {
+            // Redirect to the login page
+            //Navigation.NavigateTo("/login");
+            var uri = Navigation.ToAbsoluteUri(Navigation.Uri);
+            var baseurl = Navigation.BaseUri.TrimEnd('/');
+            // Get the path (everything after the base URI)
+            var path = uri.AbsolutePath;//.TrimStart('/');
+
+            Navigation.NavigateTo($"{baseurl}/Identity/Account/Login?returnUrl={Uri.EscapeDataString(path)}", true);
+        }
+        catch (Exception)
+        {
+
+        }
+
+    }
+}

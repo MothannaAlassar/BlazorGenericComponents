@@ -1,0 +1,169 @@
+﻿
+@inherits BaseComponent
+
+<div class="form-row search-component">
+    @if (Model.IsAccountKashf)
+    {
+        <div class="">
+            <div class="account">
+                <div class="col">
+                    <label>@Tralnslate?.GetTranslation("Select an account")</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend1"><img src="Imgs/bi--search.svg"></span>
+                        </div>
+                        <input readonly type="text" @bind="Model.AccountId" class="form-control" id="validationBoxAccount" placeholder="@Tralnslate?.GetTranslation("Account")" aria-describedby="inputGroupPrepend1" required>
+                        <input readonly type="text" @bind="Model.AccountName" class="form-control" placeholder="@Tralnslate?.GetTranslation("Account Name")">
+                        <div class="input-group-prepend">
+                            <button class="btn-info input-group-text" @onclick="@(()=>{
+                                       Model.AccountId = 0;
+                                       Model.AccountName = "";
+                                   })">
+                                ...
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <label>
+                @Tralnslate?.GetTranslation("Old Balance")
+                <input type="checkbox" @bind="Model.ShowOldPalance" class="form-control" />
+            </label>
+
+        </div>
+        <div class="">
+            <label>
+                @Tralnslate?.GetTranslation("Sumry report")
+                <input type="checkbox" @bind="Model.ShowSumry" class="form-control" />
+            </label>
+
+        </div>
+    }
+    @if (Model?.IsShowDate == true)
+    {
+        <div class="date-picker">
+            <label>@Tralnslate?.GetTranslation("From date")</label>
+            <input type="date" @bind="Model.FromDate" class="form-control" />
+        </div>
+        <div class="date-picker">
+            <label>@Tralnslate?.GetTranslation("To Date")</label>
+            <input type="date" @bind="Model.ToDate" class="form-control" />
+        </div>
+    }
+
+    @if (Model.IsShowPlans)
+    {
+        <div class="date-picker">
+            <label>@Tralnslate?.GetTranslation("Plan")</label>
+            <select class="form-control" @bind="Model.PlanName">
+                <option value="">@Tralnslate?.GetTranslation("Select Plan")</option>
+                @foreach (var p in Model.VoucherPlans)
+                {
+                    <option value="@p">@p</option>
+
+                }
+
+            </select>
+
+        </div>
+    }
+    @if (Model.IsShowEnableStates)
+    {
+        <div class="date-picker">
+            <label>@Tralnslate?.GetTranslation("Enable State")</label>
+            <select class="form-control" @bind="Model.EnableState">
+                <option value="">@Tralnslate?.GetTranslation("Select State")</option>
+                @foreach (var p in Model.VoucherEnableStates)
+                {
+                    <option value="@p">@p</option>
+
+                }
+
+            </select>
+
+        </div>
+    }
+    @if (Model.IsShowUsedStates)
+    {
+        <div class="date-picker">
+            <label>@Tralnslate?.GetTranslation("Used State")</label>
+            <select class="form-control" @bind="Model.UsedState">
+                <option value="">@Tralnslate?.GetTranslation("Select State")</option>
+                @foreach (var p in Model.VoucherUsedStates)
+                {
+                    <option value="@p">@p</option>
+
+                }
+
+            </select>
+
+        </div>
+    }
+
+<div class="search-box">
+    <label>@Tralnslate?.GetTranslation("Search")</label>
+    @if (SelectedLanguage == "ar")
+    {
+        <div class="input-group mb-3">
+            
+            <input type="search" @bind="Model.SearchVal" @onkeydown="SearchOnKeyDown" class="form-control" placeholder="search" aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <div class="input-group-prepend">
+                <button @onclick="Search" class="btn btn-outline-secondary" type="button" id="button-addon1">
+
+                    <span class="oi oi-magnifying-glass"></span>
+                </button>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="input-group mb-3">
+            <input type="search" @bind="Model.SearchVal" @onkeydown="SearchOnKeyDown" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
+
+            <div class="input-group-append">
+                <button @onclick="Search" class="btn btn-outline-secondary" type="button" id="button-addon2">
+                    <img src="Imgs/bi--search.svg" />
+                </button>
+            </div>
+
+        </div>
+    }
+
+</div>
+</div>
+
+@code {
+
+    [Parameter]
+    public ViewModels.SearchViewModel Model { get; set; } = new();
+
+    // Optional: Event callback for change notifications
+    [Parameter]
+    public EventCallback<ViewModels.SearchViewModel> OnModelChanged { get; set; }
+    [Parameter]
+    public EventCallback<bool> OnSearch { get; set; }
+
+    // Call this method when the model changes to notify the parent
+    private async Task NotifyModelChanged()
+    {
+        if (OnModelChanged.HasDelegate)
+        {
+            await OnModelChanged.InvokeAsync(Model);
+        }
+    }
+    private async Task SearchOnKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            await Search();
+        }
+    }
+    private async Task Search()
+    {
+        await OnSearch.InvokeAsync(true);
+        await Task.FromResult(0);
+    }
+}
+

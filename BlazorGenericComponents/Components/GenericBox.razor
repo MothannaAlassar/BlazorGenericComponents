@@ -1,0 +1,27 @@
+﻿@inherits Components.BaseComponent
+@inject NavigationManager Navigation
+
+@*<h3>GenericBox</h3>*@
+<div class="col-lg-3 col-xs-6">
+    <div class="small-box small-box-custom @BackgroundColor">
+        <div class="inner">
+            <h4 class="text-bold" style="font-size: large;">
+                @Value1
+            </h4>
+        </div>
+        <div class="icon">
+            <i class="ion @IconClass"></i>
+        </div>
+        <a id="linkbutton" href="@Navigation.ToAbsoluteUri(Link)" class="small-box-footer">@LinkText</a>
+    </div>
+</div>
+
+@code {
+    // Parameters for customizing the component
+    [Parameter] public string BackgroundColor { get; set; } = "bg-aqua"; // Bootstrap color class
+    [Parameter] public string CurrencyCode { get; set; } = "$"; // Default to $
+    [Parameter] public string Value1 { get; set; } // string Value to display
+    [Parameter] public string IconClass { get; set; } = "ion-clock"; // Default icon
+    [Parameter] public string Link { get; set; } = "#"; // Link for footer
+    [Parameter] public string LinkText { get; set; } = "More Info"; // Footer text
+}

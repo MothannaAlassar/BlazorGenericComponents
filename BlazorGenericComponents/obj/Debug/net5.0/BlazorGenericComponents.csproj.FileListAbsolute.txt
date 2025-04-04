@@ -1,0 +1,293 @@
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\appsettings.Development.json
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\appsettings.json
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.StaticWebAssets.xml
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.exe
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.deps.json
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.runtimeconfig.json
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.runtimeconfig.dev.json
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\ref\BlazorGenericComponents.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.pdb
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.Views.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.Views.pdb
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Humanizer.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\NLog.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\System.Runtime.Caching.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.GeneratedMSBuildEditorConfig.editorconfig
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.AssemblyInfoInputs.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.AssemblyInfo.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.csproj.CoreCompileInputs.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.MvcApplicationPartsAssemblyInfo.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.MvcApplicationPartsAssemblyInfo.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorComponent.input.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\BaseBasicGenericCertComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\BaseComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\ConfirmationDialog.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\ConfirmationDisconnectDialog.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\DisplayErrorComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\GenericBox.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\GenericChart.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\GenericList.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\LoadingSpinner.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\MessagesComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\NotFoundPage.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\Pagination.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\QueryHeaderCompo.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\SearchComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\SearchInput.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\StatBox.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\StatisticsBoxNew.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\StatisticsCardRow.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\Tabs.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\Toast.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\TotalBox.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Shared\BaseGenericCustomLayout.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorComponent.output.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\BlazorGenericComponents.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.TagHelpers.input.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.TagHelpers.output.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorCoreGenerate.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\App.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\BaseBasicGenericCertComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\BaseComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\ConfirmationDialog.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\ConfirmationDisconnectDialog.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\DisplayErrorComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\GenericBox.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\GenericChart.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\GenericList.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\LoadingSpinner.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\MessagesComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\NotFoundPage.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\Pagination.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\QueryHeaderCompo.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\SearchComponent.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\SearchInput.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\StatBox.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\StatisticsBoxNew.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\StatisticsCardRow.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\Tabs.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\Toast.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\TotalBox.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Shared\BaseGenericCustomLayout.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\_Host.cshtml.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorAssemblyInfo.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorAssemblyInfo.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\staticwebassets\BlazorGenericComponents.StaticWebAssets.Manifest.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\staticwebassets\BlazorGenericComponents.StaticWebAssets.xml
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\scopedcss\bundle\BlazorGenericComponents.styles.css
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\scopedcss\projectbundle\BlazorGenericComponents.bundle.scp.css
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorTargetAssemblyInfo.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorTargetAssemblyInfo.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.Views.pdb
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.csproj.CopyComplete
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\ref\BlazorGenericComponents.dll
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.pdb
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.genruntimeconfig.cache
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\ToggleDisplayCompo.razor.g.cs
+E:\SharedApps\GitHub\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\ToggleDisplayCompo.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\appsettings.Development.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\appsettings.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.StaticWebAssets.xml
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.exe
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.deps.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.runtimeconfig.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.runtimeconfig.dev.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\ref\BlazorGenericComponents.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.Views.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\BlazorGenericComponents.Views.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Humanizer.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\Newtonsoft.Json.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\NLog.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\System.Runtime.Caching.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.csproj.AssemblyReference.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.AssemblyInfoInputs.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.AssemblyInfo.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.csproj.CoreCompileInputs.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.MvcApplicationPartsAssemblyInfo.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.MvcApplicationPartsAssemblyInfo.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorComponent.input.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\BaseBasicGenericCertComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\BaseComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\ConfirmationDialog.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\ConfirmationDisconnectDialog.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\DisplayErrorComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\GenericBox.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\GenericChart.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\GenericList.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\LoadingSpinner.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\MessagesComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\NotFoundPage.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\Pagination.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\QueryHeaderCompo.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\SearchComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\SearchInput.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\StatBox.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\StatisticsBoxNew.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\StatisticsCardRow.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\Tabs.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\Toast.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\ToggleDisplayCompo.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Components\TotalBox.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Shared\BaseGenericCustomLayout.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorComponent.output.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\RazorDeclaration\BlazorGenericComponents.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.TagHelpers.input.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.TagHelpers.output.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorCoreGenerate.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\App.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\BaseBasicGenericCertComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\BaseComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\ConfirmationDialog.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\ConfirmationDisconnectDialog.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\DisplayErrorComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\GenericBox.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\GenericChart.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\GenericList.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\LoadingSpinner.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\MessagesComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\NotFoundPage.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\Pagination.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\QueryHeaderCompo.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\SearchComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\SearchInput.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\StatBox.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\StatisticsBoxNew.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\StatisticsCardRow.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\Tabs.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\Toast.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\ToggleDisplayCompo.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Components\TotalBox.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Shared\BaseGenericCustomLayout.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\Razor\Pages\_Host.cshtml.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorAssemblyInfo.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorAssemblyInfo.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\staticwebassets\BlazorGenericComponents.StaticWebAssets.Manifest.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\staticwebassets\BlazorGenericComponents.StaticWebAssets.xml
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\scopedcss\bundle\BlazorGenericComponents.styles.css
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\scopedcss\projectbundle\BlazorGenericComponents.bundle.scp.css
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorTargetAssemblyInfo.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.RazorTargetAssemblyInfo.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.Views.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.csproj.CopyComplete
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\ref\BlazorGenericComponents.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\BlazorGenericComponents\obj\Debug\net5.0\BlazorGenericComponents.genruntimeconfig.cache

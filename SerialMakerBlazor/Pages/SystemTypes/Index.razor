@@ -1,0 +1,232 @@
+﻿@page "/systypes"
+@inherits Components.BaseBasicCertComponent<Models.SystemType, Models.SystemType>
+<h3>Index</h3>
+<div class="row">
+    <div class="mb-3">
+        <div class="">
+            @if (!string.IsNullOrEmpty(validationMessage))
+            {
+                <MessagesComponent Message="@validationMessage" MessageType="@base.MessageType" />
+            }
+        </div>
+    </div>
+</div>
+@if (IsLoading)
+{
+    <LoadingSpinner />
+}
+else
+{
+    <button class="btn btn-primary" @onclick="@(()=> { NavigateToWithBaseUrl("addeditsystemtype/0"); })">@Tralnslate?.GetTranslation("Add New")</button>
+    <CascadingValue Value="QueryBuilder">
+
+        <QueryHeaderCompo TItem="Models.SystemType" @ref="QueryBuilder" />
+
+    </CascadingValue>
+
+    <div class="table-responsive-md">
+        @GetListContent()
+    </div>
+
+    <!-- Add/Edit Modal -->
+    <div class="modal @modalClass" tabindex="-1" style="display:@(isModalVisible ? "block" : "none")">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">@modalTitle</h5>
+                    <button type="button" class="btn-close" @onclick="HideModal">X</button>
+                </div>
+                <div class="modal-body">
+                    <EditForm Model="CurrentObject" OnValidSubmit="SaveData" OnInvalidSubmit="HandleInvalidSubmit">
+                        <DataAnnotationsValidator />
+                        @*<ValidationSummary />*@
+                        <div class="mb-3">
+                            <div class="">
+                                @if (!string.IsNullOrEmpty(validationMessage))
+                                {
+                                    <p style="color: red;">@validationMessage</p>
+                                }
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="voucherType" class="form-label">@Tralnslate?.GetTranslation("SysName")</label>
+                            <input type="text" id="voucher_length" class="form-control" @bind="CurrentObject.SysName" />
+                            <ValidationMessage For="@(() => CurrentObject.SysName)" />
+                        </div>
+                        <div class="mb-3">
+                            <label for="voucherType" class="form-label">@Tralnslate?.GetTranslation("Notes")</label>
+                            <input type="text" id="voucher_length" class="form-control" @bind="CurrentObject.Notes" />
+                            <ValidationMessage For="@(() => CurrentObject.Notes)" />
+                        </div>
+                     
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" @onclick="HideModal">@Tralnslate?.GetTranslation("Close")</button>
+                            <button type="submit" class="btn btn-primary">@modalButtonText</button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ConfirmationDialog IsVisible="showConfirmation" OnClose="@(async (confirmed) => { if (confirmed) await DeleteItem(); else CancelDelete(); })" />
+
+}
+
+@code {
+    private async Task LoadingDataAsync()
+    {
+        Items = await CurrentShowService.GetAllAsync();
+
+    }
+    private void SetIntialData()
+    {
+        Columns = new List<GridColumn<Models.SystemType>>();
+        Columns.Add(new GridColumn<Models.SystemType>
+        {
+            Title = Tralnslate?.GetTranslation("ID"),
+            Name = nameof(Models.SystemType.ID),
+            PropertySelector = p => p.ID,
+
+        });
+        Columns.Add(
+        new GridColumn<Models.SystemType>
+        {
+            Title = Tralnslate?.GetTranslation("SysName"),
+            Name = nameof(Models.SystemType.SysName),
+            PropertySelector = p => p.SysName,
+        });
+
+        Columns.Add(new GridColumn<Models.SystemType>
+        {
+            Title = Tralnslate?.GetTranslation("CreatedDate"),
+            Name = nameof(Models.SystemType.CreatedDate),
+            PropertySelector = p => p.CreatedDate,
+        });
+        Columns.Add(new GridColumn<Models.SystemType>
+        {
+            Title = Tralnslate?.GetTranslation("Notes"),
+            Name = nameof(Models.SystemType.Notes),
+            PropertySelector = p => p.Notes,
+        });
+        TableActions = new List<TableAction<Models.SystemType>>
+{
+
+            new TableAction<Models.SystemType>
+            {
+                Name = "Edit",
+                Title = "Edit",
+                Action = item => { NavigateToWithBaseUrl($"addeditsystemtype/{item.ID}"); /*ShowEditModal(item);*/ return Task.CompletedTask; }, // Call void function
+                IsVisible = true // Set visibility based on your logic
+            },
+            new TableAction<Models.SystemType>
+            {
+                Name = "Delete",
+                Title = "Delete",
+                Action = item =>{ShowConfirmation(item.ID); return Task.CompletedTask; },
+                IsVisible = true // Change to false if you want to hide this action
+            }
+
+        };
+    }
+    protected async override Task OnInitializedAsync()
+    {
+        try
+        {
+            CurrentObject = new Models.SystemType();
+            await LoadingDataAsync();
+            SetIntialData();
+            await ExecuteQuery();
+
+        }
+        catch (Exception ex)
+        {
+
+            AddErrorLog(ex);
+        }
+        IsLoading = false;
+    }
+    protected override void AddingNew()
+    {
+        CurrentObject = new Models.SystemType();
+        modalTitle = Tralnslate?.GetTranslation("Add System");
+        modalButtonText = Tralnslate?.GetTranslation("Add");
+    }
+    protected override void Editing(Models.SystemType obj)
+    {
+        base.Editing(obj);
+        modalTitle = Tralnslate?.GetTranslation("Edit System");
+        modalButtonText = Tralnslate?.GetTranslation("Update");
+    }
+    protected override async Task DeleteItemAsync(object id)
+    {
+        validationMessage = "";
+
+        try
+        {
+            var ID = Convert.ToInt32(id);
+            var rtv = await CurrentService.GetByIdAsync(ID);
+
+            if (rtv != null)
+            {
+                await base.DeleteItemAsync(ID);
+            }
+            await LoadingDataAsync();
+            await RefreshListAsync();
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+        }
+
+        IsLoading = false;
+    }
+    private bool IsProcessing = false;
+    private async Task SaveData()
+    {
+        try
+        {
+
+            var prvname = CurrentService.GetAll()?.Where(a => a.SysName.Trim() == CurrentObject.SysName.Trim() && a.ID != CurrentObject.ID)?.FirstOrDefault();
+            if (prvname != null && prvname.ID > 0)
+            {
+                validationMessage = Tralnslate?.GetTranslation("this name of this record is already exist try another name ");
+                return;
+            }
+            else
+            {
+                validationMessage = "";
+            }
+            if (CurrentObject.ID == 0)
+            {
+                CurrentObject.CreatedDate = GetSystemDate();
+                CurrentObject.CreatedUser = await GetUserIdAsync();
+                await CurrentService.AddAsync(CurrentObject);
+            }
+            else
+            {
+                CurrentObject.UpdatedDate = GetSystemDate();
+                CurrentObject.UpdatedUser = await GetUserIdAsync();
+                await CurrentService.UpdateAsync(CurrentObject.ID, CurrentObject);
+            }
+            isModalVisible = false; // Hide the modal
+            IsLoading = true;
+            await LoadingDataAsync();
+            await RefreshListAsync();
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+            validationMessage = ex?.Message;
+        }
+        IsProcessing = false;
+        IsLoading = false;
+    }
+
+    private void HandleInvalidSubmit()
+    {
+        // This will trigger if the form validation fails.
+        Console.WriteLine("Form submission is invalid.");
+    }
+
+}

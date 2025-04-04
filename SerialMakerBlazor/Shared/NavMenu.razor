@@ -1,0 +1,73 @@
+﻿<div class="sidebar">
+<div class="top-row pl-4 navbar navbar-dark">
+    <a class="navbar-brand" href="">@(showIconsOnly?"": "SerialMakerBlazor")</a><button class="oi oi-menu menu-button" @onclick="ToggleIconDisplay"></button>
+    <button class="navbar-toggler" @onclick="ToggleNavMenu">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</div>
+<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+    <ul class="nav flex-column">
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="oi oi-home" aria-hidden="true"></span>@(showIconsOnly?"": "Home") 
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="clients">
+                <span class="oi oi-people" aria-hidden="true"></span>@(showIconsOnly?"": "Clients") 
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="systypes">
+                <span class="oi oi-project" aria-hidden="true"></span>@(showIconsOnly?"": "Systems Types")
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="sysversions">
+                <span class="oi oi-timer" aria-hidden="true"></span>@(showIconsOnly?"": "Systems Versions") 
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="clientversions">
+                <span class="oi oi-cart" aria-hidden="true"></span>@(showIconsOnly?"": "Clients Versions") 
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="clientmachines">
+                <span class="oi oi-laptop" aria-hidden="true"></span>@(showIconsOnly?"": "Clients Machines") 
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="trailserial-generator">
+                <span class="oi oi-star" aria-hidden="true"></span>@(showIconsOnly?"": "Trial Serial") 
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="mainserial-generator">
+                <span class="oi oi-sun" aria-hidden="true"></span>@(showIconsOnly?"":"Main Serial")
+            </NavLink>
+        </li>
+        <li class="nav-item px-3">
+            <NavLink class="nav-link" href="encrepttext">
+                <span class="oi oi-text" aria-hidden="true"></span>@(showIconsOnly?"": "Encrept Text") 
+            </NavLink>
+        </li>
+    </ul>
+</div>
+</div>
+@code {
+    private bool showIconsOnly = false;
+    private string width = "250px";
+    private void ToggleIconDisplay()
+    {
+        showIconsOnly = !showIconsOnly;
+    }
+    private bool collapseNavMenu = true;
+
+    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

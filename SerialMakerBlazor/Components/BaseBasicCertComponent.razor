@@ -1,0 +1,304 @@
+﻿@typeparam TItem
+@typeparam ShowItem
+@inherits BlazorGenericComponents.Components.BaseBasicGenericCertComponent<TItem, ShowItem>
+@inject Repositories.IGenericRepo<TItem> currentService
+@inject Repositories.IGenericRepo<ShowItem> currentShowService
+@using Microsoft.AspNetCore.Http
+@using Microsoft.AspNetCore.Identity
+@inject IHttpContextAccessor HttpContextAccessor
+@inject UserManager<Data.AppUser> _userManager
+@inject IJSRuntime JSRuntime
+@if (IsLoading)
+{
+    <LoadingSpinner />
+}
+else
+{
+    @*<Toast Title="Bootstrap" Message="Hello, world! This is a toast message." IsVisible="@IsToastMessageVisible" IsVisibleChanged="@((value) => IsToastMessageVisible = value)" AutohideDuration="3000" />*@
+
+
+}
+
+@code {
+
+
+
+    protected Repositories.IGenericRepo<TItem> CurrentService => currentService;
+    protected Repositories.IGenericRepo<ShowItem> CurrentShowService => currentShowService;
+
+
+    protected async Task GoToBackPageAsync()
+    {
+        await JSRuntime.InvokeVoidAsync("goBack");
+    }
+
+    protected virtual async Task AddAsync(TItem item)
+    {
+        try
+        {
+            await currentService.AddAsync(item);
+            isModalVisible = false; // Hide the modal
+            await RefreshListAsync();
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+            validationMessage = ex?.Message;
+        }
+    }
+    protected virtual async Task UpdateAsync(object primaryKey, TItem item)
+    {
+        try
+        {
+            var iseditAlloed = IsEditAllowed();
+            if (!iseditAlloed.val)
+            {
+                if (!string.IsNullOrEmpty(iseditAlloed.msg))
+                    validationMessage = iseditAlloed.msg;
+                else
+                    validationMessage = Tralnslate?.GetTranslation("the edit Operation is Not Allowed");
+            }
+            else
+            {
+                await currentService.UpdateAsync(primaryKey, item);
+                isModalVisible = false; // Hide the modal
+                await RefreshListAsync();
+            }
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+            validationMessage = ex?.Message;
+        }
+    }
+
+    protected virtual async Task DeleteItem()
+    {
+        try
+        {
+            // Your logic to delete the item using itemToDeleteId
+            // For example: await itemService.DeleteItemAsync(itemToDeleteId);
+            var isdeletAllowed = IsDeleteAllowed();
+            if (!isdeletAllowed.val)
+            {
+                if (!string.IsNullOrEmpty(isdeletAllowed.msg))
+                    validationMessage = isdeletAllowed.msg;
+                else
+                    validationMessage = Tralnslate?.GetTranslation("the Delete Operation is Not Allowed");
+                MessageType = BlazorGenericComponents.Helpers.MessageType.Warning;
+                //return;
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(itemGuidToDeleteId))
+                    await DeleteItemAsync(itemGuidToDeleteId);
+                else
+                    await DeleteItemAsync(itemToDeleteId);
+            }
+            showConfirmation = false; // Close the dialog after deletion
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+        }
+
+    }
+    protected virtual (bool val, string msg) IsDeleteAllowed()
+    {
+        return (true, "");
+    }
+    protected virtual (bool val, string msg) IsEditAllowed()
+    {
+        return (true, "");
+    }
+    protected virtual async Task<(bool val, string msg)> IsEditAllowedAsync()
+    {
+        return await Task.FromResult((true, ""));
+    }
+    protected virtual async Task DeleteItemAsync(object id)
+    {
+        await currentService.DeleteAsync(id);
+        await RefreshListAsync();
+    }
+
+    protected virtual void CancelDelete()
+    {
+        showConfirmation = false; // Close the dialog without deleting
+    }
+    protected override void ShowConfirmation(int itemId)
+    {
+        itemToDeleteId = itemId;
+        showConfirmation = true;
+        StateHasChanged();
+    }
+    protected override void ShowConfirmation(ShowItem item)
+    {
+        Deleting(item);
+        var isDeleteAllowed = IsDeleteAllowed();
+        if (!isDeleteAllowed.val)
+        {
+            if (!string.IsNullOrEmpty(isDeleteAllowed.msg))
+                validationMessage = isDeleteAllowed.msg;
+            else
+                validationMessage = Tralnslate?.GetTranslation("the delete Operation is Not Allowed");
+            MessageType = BlazorGenericComponents.Helpers.MessageType.Warning;
+            StateHasChanged();
+            return;
+        }
+        else
+        {
+            showConfirmation = true;
+        }
+        StateHasChanged();
+    }
+    protected override void ShowConfirmation(long itemId)
+    {
+        itemToDeleteId = itemId;
+        showConfirmation = true;
+        StateHasChanged();
+    }
+    protected override void ShowConfirmation(string itemId)
+    {
+        itemGuidToDeleteId = itemId;
+        showConfirmation = true;
+        StateHasChanged();
+    }
+
+    /// <summary>
+    /// this method will invoked befor show the Add popup
+    /// </summary>
+    protected virtual void AddingNew()
+    {
+        modalTitle = "Add";
+        modalButtonText = "Add";
+    }
+    protected virtual void AddingNew(TItem item)
+    {
+        modalTitle = "Add";
+        modalButtonText = "Add";
+    }
+    protected override void ShowAddModal()
+    {
+        //CurrentObject = new TItem; // Reset for new item
+        validationMessage = "";
+        AddingNew();
+
+        isModalVisible = true;
+        modalClass = "show"; // Show the modal
+    }
+    protected override void ShowAddModal(TItem item)
+    {
+        validationMessage = "";
+        //CurrentObject = new TItem; // Reset for new item
+        AddingNew(item);
+
+        isModalVisible = true;
+        modalClass = "show"; // Show the modal
+        StateHasChanged();
+    }
+    protected override void HideModal()
+    {
+        isModalVisible = false;
+    }
+    protected virtual void Deleting(ShowItem obj)
+    {
+        modalTitle = "Edit";
+        modalButtonText = "Update";
+    }
+    /// <summary>
+    /// this method will invoked befor show the edit popup
+    /// </summary>
+
+    protected virtual void Editing(ShowItem obj)
+    {
+        modalTitle = "Edit";
+        modalButtonText = "Update";
+    }
+    protected override void ShowEditModal(ShowItem obj)
+    {
+        validationMessage = "";
+        Editing(obj);
+        //CurrentObject = obj;
+        var iseditAllowed = IsEditAllowed();
+        if (!iseditAllowed.val)
+        {
+            if (!string.IsNullOrEmpty(iseditAllowed.msg))
+                validationMessage = iseditAllowed.msg;
+            else
+                validationMessage = "the edit Operation is Not Allowed";
+            MessageType = BlazorGenericComponents.Helpers.MessageType.Warning;
+            StateHasChanged();
+            return;
+        }
+        else
+        {
+            isModalVisible = true;
+            modalClass = "show"; // Show the modal
+        }
+        StateHasChanged();
+    }
+    protected virtual void RefreshAfterExecuteQuery()
+    {
+
+    }
+    //for builder query
+    protected override async Task ExecuteQuery()
+    {
+        try
+        {
+            IsLoading = true;
+            //await SearchData();
+            await base.ExecuteQuery();
+            RefreshAfterExecuteQuery();
+            StateHasChanged();
+            IsLoading = false;
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+        }
+
+    }
+    // private IEnumerable<Na> FilteredItems => items?.OrderBy(p => ascending ? p.GetType().GetProperty(sortColumn)?.GetValue(p, null) : null)
+    //    .ThenByDescending(p => !ascending ? p.GetType().GetProperty(sortColumn)?.GetValue(p, null) : null);
+
+
+    protected override void ToggleQueryBuilder()
+    {
+        showQueryBuilder = !showQueryBuilder; // Toggle visibility
+    }
+
+
+    protected override async Task ClearFilters()
+    {
+        IsLoading = true;
+        await base.ClearFilters();
+        RefreshAfterExecuteQuery();
+        StateHasChanged();
+        IsLoading = false;
+    }
+    //end build query
+
+    protected async Task<Data.AppUser> GetUserDataAsync()
+    {
+        var user = await _userManager.GetUserAsync(HttpContextAccessor.HttpContext.User);
+
+        return user;
+    }
+    protected async Task<string> GetUserIdAsync()
+    {
+        var user = await _userManager.GetUserAsync(HttpContextAccessor.HttpContext.User);
+
+        return user?.Id;
+    }
+    //protected bool IsInRole(string roleName)
+    //{
+    //    var rtv = HttpContextAccessor.HttpContext.User.IsInRole(roleName);
+    //    return rtv;
+    //}
+
+    //protected bool IsAdimin => IsInRole("Admin");
+    //protected bool IsManager => IsInRole("Manager");
+    //protected bool IsAccountant => IsInRole("Accountant");
+
+}

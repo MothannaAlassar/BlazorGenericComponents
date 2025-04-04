@@ -1,0 +1,53 @@
+﻿@page "/spinner-demo"
+
+<h3>Blazor Loading Spinners Demo</h3>
+
+<!-- 1. CSS Animated Spinner -->
+<h5>CSS Animated Spinner</h5>
+<div class="spinner"></div>
+
+<!-- 2. Bootstrap Spinner -->
+<h5>Bootstrap Spinner</h5>
+<div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+</div>
+
+<!-- 3. SVG Spinner -->
+<h5>SVG Spinner</h5>
+<svg width="40px" height="40px" viewBox="0 0 50 50">
+    <circle cx="25" cy="25" r="20" stroke="#007bff" stroke-width="5" fill="none"
+            stroke-linecap="round" stroke-dasharray="90,150" stroke-dashoffset="0">
+        <animateTransform attributeType="XML" attributeName="transform" type="rotate"
+                          from="0 25 25" to="360 25 25" dur="1s" repeatCount="indefinite" />
+    </circle>
+</svg>
+
+<!-- 4. Conditional Spinner -->
+<h5>Conditional Spinner</h5>
+@if (isLoading)
+{
+    <div class="d-flex justify-content-center align-items-center" style="height: 100px;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else
+{
+    <p>Data loaded successfully!</p>
+}
+
+<button class="btn btn-primary mt-2" @onclick="StartLoading">Simulate Loading</button>
+
+@code {
+    private bool isLoading = false;
+
+    private async Task StartLoading()
+    {
+        isLoading = true;
+        await Task.Delay(3000); // Simulate loading time
+        isLoading = false;
+    }
+}
+
+

@@ -1,0 +1,36 @@
+﻿
+
+
+@if (CardItems != null && CardItems.Count > 0)
+{
+    int cont = 1;
+
+    foreach (var itm in CardItems)
+    {
+        <div class="col-lg-3 col-xs-6">
+            <div class="small-box small-box-custom statistics-bg-@cont">
+                <div class="inner">
+                    <h4 class="text-bold" style="font-size: large;">
+                        @itm.Value
+                    </h4>
+                </div>
+                <div class="icon">
+                    <i class="ion @IconClass"></i>
+                </div>
+                <div class="static-counter-num">@itm.Name</div>
+            </div>
+        </div>
+        if (cont >= 3)
+        {
+            cont = 0;
+        }
+        cont++;
+    }
+
+}
+
+@code {
+    [Parameter] public List<ViewModels.CardViewModel> CardItems { get; set; }
+    [Parameter] public string Title { get; set; }
+    [Parameter] public string IconClass { get; set; } = "ion-clock"; // Default icon
+}

@@ -1,0 +1,30 @@
+﻿
+@page "/error"
+@layout Shared.BaseGenericCustomLayout
+@inject NavigationManager navigation 
+    <img src="Imgs/error-404.png" alt="nasServerApp" style="height:160px;" />
+    <h1>Oops! Something Went Wrong</h1>
+    <p>We are sorry for the inconvenience. Please try again later or contact support.</p>
+    <a href="@baseUrl">Go Back Home</a>
+    <a style="color:blue" @onclick="Reload">Reload</a>
+    @code {
+
+        private string baseUrl;
+        protected override void OnInitialized()
+        {
+            baseUrl = navigation.BaseUri.TrimEnd('/');
+            base.OnInitialized();
+        }
+        private void Reload()
+        {
+            try
+            {
+
+                navigation.NavigateTo(navigation.Uri, true);
+            }
+            catch (Exception)
+            {
+
+            }
+        }
+    }

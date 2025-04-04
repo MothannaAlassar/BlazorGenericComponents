@@ -1,0 +1,540 @@
+﻿@inherits BlazorGenericComponents.Components.BaseComponent
+    <div class="sidebar">
+        <div class="top-row pl-4 navbar navbar-dark">
+            <a class="navbar-brand" href="">@(showIconsOnly?"": Tralnslate?.GetTranslation("NasServerApp"))</a>
+            <button class="navbar-toggler" @onclick="ToggleNavMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+
+            <ul class="nav flex-column">
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                        <span class="oi oi-home" aria-hidden="true"></span>@(showIconsOnly?"": "Dashboard")
+                    </NavLink>
+                </li>
+                @if (IsAdimin || IsManager)
+                {
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[0])">
+                            <span class="oi oi-rss" aria-hidden="true"></span>@(showIconsOnly?"": "Internet Plan")
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[0]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[0]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+                            @*<span class="oi oi-arrow-left"></span>*@
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == "Internet Plan"?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="plans/Hotspot">
+                                        <span class="oi oi-wifi" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Hostpot")
+                                    </NavLink>
+                                    @*<NavLink class="nav-link" href="plans/PPPOE">
+                                            <span class="oi oi-wifi" aria-hidden="true"></span>@Tralnslate?.GetTranslation("PPPOE")
+                                        </NavLink>*@
+                                    <NavLink class="nav-link" href="pppoeplans">
+                                        <span class="oi oi-folder" aria-hidden="true"></span>@Tralnslate?.GetTranslation("PPPOE")
+                                    </NavLink>
+                                    <NavLink class="nav-link" href="bandwidths">
+                                        <span class="oi oi-compass" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Bandwidth")
+                                    </NavLink>
+                                </li>
+
+                                @*
+                                    <a href="page1" class="submenu-item">Page 1</a>
+                                    <a href="page2" class="submenu-item">Page 2</a>*@
+                            </ul>
+                        }
+
+                    </li>
+                }
+                @if (IsAdimin || IsManager)
+                {
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[1])" role="button" aria-expanded="@(ExpanderCategory?.ToLower() == menus[1]?.ToLower() && isCategory1Expanded)">
+                            <span class="oi oi-wifi" aria-hidden="true"></span>@(showIconsOnly?"": Tralnslate?.GetTranslation("Network"))
+
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[1]?.ToLower() && isCategory1Expanded) ? "▼" : "▶")</span>
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[1]?.ToLower() && isCategory1Expanded) ? "▼" : "◀")</span>
+                            }
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == "network" && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="routers">
+                                        <span class="oi oi-monitor" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Routers")
+                                    </NavLink>
+                                    <NavLink class="nav-link" href="ippool">
+                                        <span class="oi oi-grid-three-up" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Ip Pool")
+                                    </NavLink>
+                                    @*<NavLink class="nav-link" href="rputersmap">
+                                            <span class="oi oi-map" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Routers Map")
+                                        </NavLink>*@
+                                </li>
+                            </ul>
+                        }
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link nav-toggle" @onclick="() => ToggleExpand(menus[2])">
+                            <span class="oi oi-laptop" aria-hidden="true"></span>@(showIconsOnly?"": Tralnslate?.GetTranslation("Radius"))
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[2]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[2]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == "Radius"?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="radiusnas">
+                                        <span class="oi oi-laptop" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Radius Nas")
+                                    </NavLink>
+                                    <NavLink class="nav-link" href="radiusstatus">
+                                        <span class="oi oi-list" aria-hidden="true"></span>@Tralnslate.GetTranslation("Radius Status")
+                                    </NavLink>
+                                    @*<NavLink class="nav-link" href="radiusclienttester">
+                                            <span class="oi oi-map" aria-hidden="true"></span>Client Tester
+                                        </NavLink>*@
+                                    <NavLink class="nav-link" href="onlineusers">
+                                        <span class="oi oi-list" aria-hidden="true"></span>@Tralnslate.GetTranslation("Online Users")
+                                    </NavLink>
+                                </li>
+
+                                @*
+                                    <a href="page1" class="submenu-item">Page 1</a>
+                                    <a href="page2" class="submenu-item">Page 2</a>◀ ▼▲▶ ▼▲▶ *@
+                            </ul>
+                        }
+
+                    </li>
+                }
+                @if (IsAdimin || IsManager || IsAccountant)
+                {
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[4])">
+                            <span class="oi oi-people" aria-hidden="true"></span>
+                            @Tralnslate?.GetTranslation("Clients")
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[4]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[4]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == "Clients"?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="clients">
+                                        <span class="oi oi-people" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Clients")
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        }
+
+                    </li>
+
+                }
+                @if (IsAdimin || IsManager)
+                {
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[3])">
+                            <span class="oi oi-laptop" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Services")
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[3]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[3]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == "Service"?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="userrecharges">
+                                        <span class="oi oi-people" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Active User")
+                                    </NavLink>
+
+                                    <NavLink class="nav-link" href="vouchergroups">
+                                        <span class="oi oi-grid-four-up" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Voucher Group")
+                                    </NavLink>
+                                    <NavLink class="nav-link" href="VchrrGrpSngle">
+                                        <span class="oi oi-grid-two-up" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Single Vouchers")
+                                    </NavLink>
+
+
+
+                                </li>
+
+                            </ul>
+                        }
+
+                    </li>
+
+                }
+
+                <li class="nav-item px-3">
+                    <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[5])">
+                        <span class="oi oi-book" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Reports")
+                        @if (base.SelectedLanguage == "ar")
+                        {
+                            <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[5]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                        }
+                        else
+                        {
+                            <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[5]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                        }
+                    </NavLink>
+                    @if (ExpanderCategory?.ToLower() == "Reports"?.ToLower() && isCategory1Expanded)
+                    {
+                        <ul class="submenu">
+                            @if (IsAdimin || IsManager)
+                            {
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="voucherreport">
+                                        <span class="oi oi-book" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Vouchers Report")
+                                    </NavLink>
+                                </li>
+                            }
+                            @if (IsAdimin || IsManager || IsAccountant)
+                            {
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="transactionreport">
+                                        <span class="oi oi-book" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Transactions Report")
+                                    </NavLink>
+                                </li>
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="clientsumry">
+                                        <span class="oi oi-book" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Clients Report")
+                                    </NavLink>
+                                </li>
+                            }
+
+
+
+                        </ul>
+                    }
+
+                </li>
+                @if (IsAdimin || IsManager)
+                {
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[6])">
+                            <span class="oi oi-monitor" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Microtik Monitor")
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[6]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[6]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == "Microtik Monitor"?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="microtick">
+                                        <span class="oi oi-monitor" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Microtik Monitor")
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        }
+
+                    </li>
+                }
+                @if (IsAdimin)
+                {
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[7])">
+                            <span class="oi oi-person" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Manage Users")
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[7]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[7]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == "Manage Users"?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="users">
+                                        <span class="oi oi-people" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Manage Users")
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        }
+
+                    </li>
+
+                }
+                @if (IsAdimin || IsAccountant)
+                {
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[8])">
+                            <span class="oi oi-document" aria-hidden="true"></span>@Tralnslate?.GetTranslation(menus[8])
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[8]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[8]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == menus[8]?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="accounts">
+                                        <span class="oi oi-document" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Accounts Tree")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="currencies">
+                                        <span class="oi oi-dollar" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Currency")
+                                    </NavLink>
+                                </li>
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="boxes">
+                                        <span class="oi oi-box" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Boxes")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="banks">
+                                        <span class="oi oi-home" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Banks")
+                                    </NavLink>
+                                </li>
+
+                                @*
+                                    <li class="nav-item px-3">
+                                        <NavLink class="nav-link" href="accountgroup">
+                                            <span class="oi oi-graph" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Accounts Groups")
+                                        </NavLink>
+                                    </li>*@
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="accountcatgories">
+                                        <span class="oi oi-grid-three-up" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Accounts Categories")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="accountgrouptypes">
+                                        <span class="oi oi-list-rich" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Account Group")
+                                    </NavLink>
+                                </li>
+
+                            </ul>
+                        }
+
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[9])">
+                            <span class="oi oi-calculator" aria-hidden="true"></span>@Tralnslate?.GetTranslation(menus[9])
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[9]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[9]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == menus[9]?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="withdraw">
+                                        <span class="oi oi-credit-card" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Withdraws")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="deposit">
+                                        <span class="oi oi-credit-card" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Deposits")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="dailyentry">
+                                        <span class="oi oi-copywriting" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Entries")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="openbalance">
+                                        <span class="oi oi-envelope-open" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Open balances")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="closeentry">
+                                        <span class="oi oi-lock-locked" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Close entry")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="evalentries">
+                                        <span class="oi oi-calculator" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Eval entry")
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        }
+
+                    </li>
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[10])">
+                            <span class="oi oi-document" aria-hidden="true"></span>@Tralnslate?.GetTranslation(menus[10])
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[10]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[10]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == menus[10]?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="accountreport">
+                                        <span class="oi oi-project" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Account Statement")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="balancesheet">
+                                        <span class="oi oi-spreadsheet" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Balance sheet")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="trailbalance">
+                                        <span class="oi oi-pie-chart" aria-hidden="true"></span>@Tralnslate?.GetTranslation("trail balance")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="incomestatement">
+                                        <span class="oi oi-bar-chart" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Income statement")
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        }
+
+                    </li>
+                }
+                @if (IsAdimin)
+                {
+                    <li class="nav-item px-3">
+                        <NavLink class="nav-link menu-item-link" @onclick="() => ToggleExpand(menus[11])">
+                            <span class="oi oi-cog" aria-hidden="true"></span>@Tralnslate?.GetTranslation(menus[11])
+                            @if (base.SelectedLanguage == "ar")
+                            {
+                                //11 is application settings
+                                <span class="mr-auto">@((ExpanderCategory?.ToLower() == menus[11]?.ToLower() && isCategory1Expanded)? "▼" : "▶")</span> <!-- Add margin-left for spacing -->
+                            }
+                            else
+                            {
+                                //11 is application settings
+                                <span class="ml-auto">@((ExpanderCategory?.ToLower() == menus[11]?.ToLower() && isCategory1Expanded)? "▼" : "◀")</span> <!-- Add margin-left for spacing -->
+                            }
+                        </NavLink>
+                        @if (ExpanderCategory?.ToLower() == menus[11]?.ToLower() && isCategory1Expanded)
+                        {
+                            <ul class="submenu">
+
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="appsettings">
+                                        <span class="oi oi-cog" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Application Settings")
+                                    </NavLink>
+                                </li>
+                                <li class="nav-item px-3">
+                                    <NavLink class="nav-link" href="headers">
+                                        <span class="oi oi-document" aria-hidden="true"></span>@Tralnslate?.GetTranslation("Report Header")
+                                    </NavLink>
+                                </li>
+                            </ul>
+                        }
+
+                    </li>
+                }
+            </ul>
+        </div>
+        </div>
+
+        @code {
+
+            private bool showIconsOnly = false;
+            private string width = "250px";
+            private void ToggleIconDisplay()
+            {
+                showIconsOnly = !showIconsOnly;
+            }
+
+            private bool collapseNavMenu = true;
+            private List<string>
+            menus = new List<string>
+                { "Internet Plan", "Network", "Radius", "Service", "Clients", "Reports",
+        "Microtik Monitor", "Manage Users","Accounts Inputs","Account Operations","Account Reports","Application settings" };
+            private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+            private void ToggleNavMenu()
+            {
+                collapseNavMenu = !collapseNavMenu;
+            }
+            private bool isCategory1Expanded;
+            private bool isCategory2Expanded;
+            private string ExpanderCategory;
+
+            private void ToggleExpandCategory1()
+            {
+                isCategory1Expanded = !isCategory1Expanded;
+            }
+
+            private void ToggleExpandCategory2()
+            {
+                isCategory2Expanded = !isCategory2Expanded;
+            }
+            private void ToggleExpand(string title)
+            {
+                if (title != ExpanderCategory)
+                {
+                    if (isCategory1Expanded)
+                        isCategory1Expanded = !isCategory1Expanded;
+                }
+                ExpanderCategory = title;
+                isCategory1Expanded = !isCategory1Expanded;
+                collapseNavMenu = !collapseNavMenu;
+            }
+
+        }

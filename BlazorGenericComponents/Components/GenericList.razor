@@ -1,0 +1,324 @@
+﻿@inject NavigationManager Navigation
+@typeparam TItem
+@typeparam TColumn
+@if (isLoading)
+{
+    <LoadingSpinner />
+}
+else
+{
+
+    <div class="table-responsive-xl">
+        <div class="table-wrapper">
+            <table class="table table-striped">
+                <thead>
+
+                    <tr>
+                        @if (Actions != null && Actions?.Count > 0)
+                        {
+                            <th></th>
+                        }
+                        @foreach (var column in Columns)
+                        {
+
+                            if (column.IsSortable)
+                            {
+                                <th @onclick=@(() => SortBy(column.Name))>
+                                    @column.Title
+                                    @if (sortColumn == column.Name)
+                                    {
+                                        <span class="oi @(ascending?"oi-sort-ascending":"oi-sort-descending")"></span>}
+                                </th>
+                            }
+                            else
+                            {
+                                <th>@column.Title</th>
+                            }
+
+                        }
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (FilteredItems != null && FilteredItems.Count() > 0)
+                    {
+                        foreach (var item in FilteredItems?.ToList())
+                        {
+                            var rclass = Columns?.Where(a => !string.IsNullOrEmpty(a.RowCssClass))?.FirstOrDefault()?.RowCssClass;
+                            <tr class="@rclass">
+                                @if (Actions != null && Actions.Count > 0)
+                                {
+                                    <td>
+                                        <div class="menu-button">
+                                            <button class="btn-outline-success bi bi-three-dots-vertical" @onclick="() => ToggleMenu(item)">
+                                                <img src="Imgs/three-dots-vertical.svg" alt="menu" />
+                                            </button>
+                                            @if (IsShowMenu || selectedItem == item)
+                                            {
+                                                <ul class="action-menu" style="display:@(IsShowMenu && selectedItem == item ? "block" : "none")">
+                                                    @foreach (var action in Actions?.ToList())
+                                                    {
+                                                        @if (action.IsVisible)
+                                                        {
+                                                            <li>
+                                                                @if (action.Name?.ToLower() == "details")
+                                                                {
+                                                                    if (!string.IsNullOrEmpty(action.HrefUrl))
+                                                                    {
+                                                                        var link = $"{action.HrefUrl}/{action.PropertySelector(item)}";
+                                                                        <a class="btn btn-success oi oi-list" href="@Navigation.ToAbsoluteUri(link)"></a>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <button class="btn btn-success oi oi-list" @onclick="() => action.Action(item)"></button>
+                                                                    }
+                                                                }
+                                                                else if (action.Name?.ToLower() == "edit")
+                                                                {
+                                                                    <button class="btn btn-info oi oi-pencil" @onclick="() => action.Action(item)"></button>
+                                                                }
+                                                                else if (action.Name?.ToLower() == "Change Password".ToLower())
+                                                                {
+                                                                    <button class="btn btn-primary oi oi-key" @onclick="() => action.Action(item)"></button>
+                                                                }
+                                                                else if (action.Name?.ToLower() == "disconnect")
+                                                                {
+                                                                    <button class="btn btn-danger oi oi-ban" @onclick="() => action.Action(item)"></button>
+                                                                }
+                                                                else if (action.Name?.ToLower() == "post" || action.Name?.ToLower() == "unpost")
+                                                                {
+                                                                    <button class="btn btn-success oi oi-transfer" @onclick="() => action.Action(item)"></button>
+                                                                }
+                                                                else if (action.Name?.ToLower() == "delete")
+                                                                {
+                                                                    <button class="btn btn-danger oi oi-delete" @onclick="() => action.Action(item)"></button>
+                                                                }
+                                                                else if (action.Name?.ToLower() == "entry")
+                                                                {
+                                                                    if (!string.IsNullOrEmpty(action.HrefUrl))
+                                                                    {
+                                                                        var link = $"{action.HrefUrl}/{action.PropertySelector(item)}";
+                                                                        <a class="btn btn-success oi oi-document" href="@Navigation.ToAbsoluteUri(link)"></a>
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        <button class="btn btn-success oi oi-document" @onclick="() => action.Action(item)"></button>
+                                                                    }
+                                                                }
+                                                            </li>
+                                                        }
+                                                    }
+                                                </ul>
+                                            }
+                                        </div>
+                                    </td>
+                                }
+                                @foreach (var column in Columns)
+                                {
+                                    if (column.Action != null)
+                                    {
+                                        <td class="@column.CssClass" style="color:blue;cursor:pointer;" @onclick="() => column.Action(item)">@column.PropertySelector(item)</td>
+
+                                    }
+                                    else
+                                    {
+                                        <td class="@column.CssClass">@column.PropertySelector(item)</td>
+                                    }
+
+                                }
+
+
+
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="">
+        <Pagination TotalItems="@totalItems" ItemsPerPage="@itemsPerPage" OnPageChanged="OnPageChanged" />
+    </div>
+    <style>
+        .table-responsive-xl {
+            overflow-x: auto; /* Enable horizontal scrolling */
+            max-height: 80vh; /* Set a maximum height */
+            position: relative; /* Keep it relative to the parent */
+        }
+
+        .table-wrapper {
+            display: block; /* Allow the table to overflow */
+            min-width: 100%; /* Ensure it takes the full width */
+        }
+
+        .table {
+            /*table-layout: fixed;*/ /* Prevents columns from shifting */
+            width: 100%; /* Ensure the table uses the full width */
+            border-collapse: collapse; /* Optional: for better styling */
+        }
+
+        th, td {
+            padding: 8px; /* Add padding for readability */
+            border: 1px solid #ddd; /* Optional: add borders for clarity */
+            text-align: left; /* Align text to the left */
+        }
+
+
+        .action-menu {
+            display: none; /* Hide by default */
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+            position: absolute; /* Position it correctly */
+            background: white; /* Background color */
+            border: 1px solid #ccc; /* Border around the menu */
+            white-space: nowrap; /* Prevent wrapping of items */
+        }
+
+        .menu-button:hover .action-menu {
+            display: block; /* Show on hover */
+        }
+
+        .action-menu li {
+            display: inline-block; /* Display items inline horizontally */
+            /*padding: 8px 12px;*/ /* Padding for each item */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+            .action-menu li:hover {
+                background: #f0f0f0; /* Highlight on hover */
+            }
+    </style>
+}
+@code {
+
+    [Parameter] public List<TItem> Items { get; set; } = new List<TItem>();
+    [Parameter] public List<TableAction<TItem>> Actions { get; set; }
+    [Parameter] public int PageSize { get; set; } = 10;
+    private List<TItem> pagedItems = new List<TItem>();
+    private Dictionary<string, string> filterTexts = new Dictionary<string, string>();
+    [Parameter] public List<Helpers.GridColumn<TItem>> Columns { get; set; } = new List<Helpers.GridColumn<TItem>>();
+    private int totalItems;
+    private int itemsPerPage = 10;
+    private int currentPage = 1;
+    private bool isLoading = true;
+    private bool IsShowMenu = false;
+    protected async override Task OnInitializedAsync()
+    {
+        itemsPerPage = PageSize;
+        if (itemsPerPage <= 0)
+            itemsPerPage = 10;
+        foreach (var column in Columns)
+        {
+            filterTexts[column.Name] = string.Empty; // Default to empty
+        }
+        await LoadData();
+
+        //return base.OnInitializedAsync();
+    }
+    protected override void OnParametersSet()
+    {
+        totalItems = Items?.Count ?? 0;
+        UpdatePagedItems(currentPage);
+        StateHasChanged();
+        base.OnParametersSet();
+    }
+    //protected async override Task OnAfterRenderAsync(bool firstRender)
+    //{
+    //    itemsPerPage = PageSize;
+    //    if (itemsPerPage <= 0)
+    //        itemsPerPage = 10;
+    //    foreach (var column in Columns)
+    //    {
+    //        filterTexts[column.Name] = string.Empty; // Default to empty
+    //    }
+    //    await LoadData();
+    //}
+    private async Task LoadData()
+    {
+        // Simulate a delay for data fetching
+        await Task.Delay(200);
+        if (Items?.Count > 0)
+        {
+            totalItems = Items?.Count ?? 0;
+            UpdatePagedItems(1);
+        }
+        isLoading = false;
+
+        // Example of setting Items after fetching data
+
+    }
+    private void UpdatePagedItems(int page)
+    {
+        currentPage = page;
+        pagedItems = Items?.AsEnumerable()?.Skip((page - 1) * itemsPerPage).Take(itemsPerPage).ToList();
+    }
+
+    private void OnPageChanged(int page)
+    {
+        UpdatePagedItems(page);
+    }
+    private IEnumerable<TItem> FilteredItems => FilterItems();
+    //Items?
+    //    //.Where(p => string.IsNullOrWhiteSpace(typeFilter) || p.Type.ToString().Contains(typeFilter))
+    //    //.Where(p => string.IsNullOrWhiteSpace(routerFilter) || p.Routers.Contains(routerFilter, StringComparison.OrdinalIgnoreCase))
+    //    //.Where(p => string.IsNullOrWhiteSpace(yearFilter) || p.YearId.ToString().Contains(yearFilter))
+    //    //.Where(p => string.IsNullOrWhiteSpace(NumberFilter) || p.Numberofvouchers.ToString().Contains(NumberFilter))
+    //    .OrderBy(p => ascending ? p.GetType().GetProperty(sortColumn)?.GetValue(p, null) : null)
+    //    .ThenByDescending(p => !ascending ? p.GetType().GetProperty(sortColumn)?.GetValue(p, null) : null);
+    private IEnumerable<TItem> FilterItems()
+    {
+        var filtered = Items?.AsEnumerable();
+        if (Columns != null && Columns?.Where(a => a.IsFilterable == true)?.ToList()?.Count > 0)
+            foreach (var column in Columns)
+            {
+                if (!string.IsNullOrWhiteSpace(filterTexts[column.Name]))
+                {
+                    filtered = filtered.Where(item => MatchesFilter(item, column.Name));
+                }
+            }
+
+        return
+             filtered?
+            .OrderBy(p => ascending ? p.GetType().GetProperty(sortColumn)?.GetValue(p, null) : null)?
+       .ThenByDescending(p => !ascending ? p.GetType().GetProperty(sortColumn)?.GetValue(p, null) : null)
+       ?.Skip((currentPage - 1) * itemsPerPage)?.Take(itemsPerPage);
+
+    }
+    private string sortColumn = "id";
+    private bool ascending = true;
+
+    private void SortBy(string column)
+    {
+        if (sortColumn == column)
+        {
+            ascending = !ascending;
+        }
+        else
+        {
+            sortColumn = column;
+            ascending = true;
+        }
+    }
+    private dynamic selectedItem;
+    private void ToggleMenu(TItem item)
+    {
+        if (selectedItem != null && item != selectedItem)
+            if (IsShowMenu)
+                IsShowMenu = !IsShowMenu;
+        IsShowMenu = !IsShowMenu;
+        selectedItem = item;
+        StateHasChanged();
+    }
+    private bool MatchesFilter(TItem item, string columnName)
+    {
+        var value = GetPropertyValue(item, columnName)?.ToString();
+        var filterText = filterTexts[columnName];
+
+        return !string.IsNullOrEmpty(value) && value.IndexOf(filterText, StringComparison.OrdinalIgnoreCase) >= 0;
+    }
+    private object GetPropertyValue(TItem item, string propertyName)
+    {
+        return typeof(TItem).GetProperty(propertyName)?.GetValue(item);
+    }
+}

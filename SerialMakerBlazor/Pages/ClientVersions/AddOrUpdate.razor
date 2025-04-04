@@ -1,0 +1,331 @@
+﻿@page "/addeditclientversion/{Id:int}"
+@inherits Components.BaseBasicCertComponent<Models.ClientVersion, Models.ClientVersion>
+@inject Repositories.IGenericRepo<Models.Client> clientService
+@inject Repositories.IGenericRepo<Models.SystemType> sysTypeService
+@inject Repositories.IGenericRepo<Models.SysVersion> sysVersionService
+@inject Repositories.IGenericRepo<Models.Country> countryService
+@inject Repositories.IGenericRepo<Models.Governorate> governprateService
+@inject Repositories.IGenericRepo<Models.City> cityService
+@inject Repositories.ICodingRepository codingService
+<div class="container bg-light">
+    <h3 class="text-md-center">@modalTitle</h3>
+    <!-- Add/Edit Modal -->
+
+    @if (IsLoading)
+    {
+        <LoadingSpinner />
+    }
+    else
+    {
+
+<EditForm Model="CurrentObject" OnValidSubmit="SaveData" OnInvalidSubmit="HandleInvalidSubmit">
+    <DataAnnotationsValidator />
+    @*<ValidationSummary />*@
+    <div class="mb-3">
+        <div class="">
+            @if (!string.IsNullOrEmpty(validationMessage))
+            {
+                <p style="color: red;">@validationMessage</p>
+            }
+        </div>
+    </div>
+    <div class="mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="voucherType" class="form-label">@Tralnslate?.GetTranslation("Client")</label>
+                <InputSelect id="voucherType" @bind-Value="CurrentObject.ClientId" class="form-select form-control">
+                    <option value="">@Tralnslate?.GetTranslation("Select a Client")</option>
+                    @foreach (var type in clients)
+                        {
+                        <option value="@type.ID">@type.Name</option>
+                        }
+                </InputSelect>
+                <ValidationMessage For="@(() => CurrentObject.ClientId)" />
+            </div>
+            <div class="col-md-4">
+                <label for="Routers" class="form-label">@Tralnslate?.GetTranslation("System")</label>
+                <InputSelect id="Routers" @bind-Value="CurrentObject.SysTypeId" class="form-select form-control">
+                    <option value="">@Tralnslate?.GetTranslation("Select a System")</option>
+
+                    @foreach (var s in systemTypes)
+                        {
+                        <option value="@s?.ID">@s?.SysName</option>
+                        }
+                </InputSelect>
+                <ValidationMessage For="@(() => CurrentObject.SysTypeId)" />
+            </div>
+            <div class="col-md-4">
+                <label for="id_plan" class="form-label">@Tralnslate?.GetTranslation("Version")</label>
+                <InputSelect id="id_plan" class="form-select form-control" @bind-Value="CurrentObject.VersionId">
+                    <option value="0">@Tralnslate?.GetTranslation("Select a Version")</option>
+
+                    @foreach (var v in sysVersions?.Where(a => a.SystemTypeId == CurrentObject.SysTypeId)?.ToList())
+                        {
+                        <option value="@v.ID">@v.VersionName</option>
+                        }
+
+                </InputSelect>
+                <ValidationMessage For="@(() => CurrentObject.VersionId)" />
+            </div>
+        </div>
+
+    </div>
+    <div class="mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="Country" class="form-label">@Tralnslate?.GetTranslation("Country")</label>
+                <InputSelect id="Country" @bind-Value="CurrentObject.CountryId" class="form-select form-control">
+                    <option value="">@Tralnslate?.GetTranslation("Select a Country")</option>
+                    @foreach (var c in countries)
+                        {
+                        <option value="@c.Id">@c.Name</option>
+                        }
+                </InputSelect>
+                <ValidationMessage For="@(() => CurrentObject.CountryId)" />
+            </div>
+            <div class="col-md-4">
+                <label for="GovernorateId" class="form-label">@Tralnslate?.GetTranslation("Governorate")</label>
+                <InputSelect id="GovernorateId" @bind-Value="CurrentObject.GovernorateId" class="form-select form-control">
+                    <option value="">@Tralnslate?.GetTranslation("Select a Governorate")</option>
+
+                    @foreach (var g in governorates?.Where(a=>a.CountryId==CurrentObject.CountryId)?.ToList())
+                        {
+                        <option value="@g?.Id">@g?.Name</option>
+                        }
+                </InputSelect>
+                <ValidationMessage For="@(() => CurrentObject.GovernorateId)" />
+            </div>
+            <div class="col-md-4">
+                <label for="CityId" class="form-label">@Tralnslate?.GetTranslation("City")</label>
+                <InputSelect id="CityId" class="form-select form-control" @bind-Value="CurrentObject.CityId">
+                    <option value="0">@Tralnslate?.GetTranslation("Select a City")</option>
+
+                    @foreach (var c in cities?.Where(a => a.GovernorateId == CurrentObject.GovernorateId)?.ToList())
+                        {
+                        <option value="@c.Id">@c.Name</option>
+                        }
+
+                </InputSelect>
+                <ValidationMessage For="@(() => CurrentObject.CityId)" />
+            </div>
+        </div>
+
+    </div>
+    <div class="mb-3">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="TypeLicence" class="form-label">@Tralnslate?.GetTranslation("TypeLicence")</label>
+                <InputSelect id="TypeLicence" @bind-Value="CurrentObject.TypeLicence" class="form-select form-control">
+                    <option value="">@Tralnslate?.GetTranslation("Select a TypeLicence")</option>
+                    @foreach (var c in licinceTypes)
+                        {
+                        <option value="@c.CodingValue">@c.CodingName</option>
+                        }
+                </InputSelect>
+                <ValidationMessage For="@(() => CurrentObject.TypeLicence)" />
+            </div>
+            <div class="col-md-4">
+                <label for="TypeInstallation" class="form-label">@Tralnslate?.GetTranslation("TypeInstallation")</label>
+                <InputSelect id="TypeInstallation" @bind-Value="CurrentObject.TypeInstallation" class="form-select form-control">
+                    <option value="">@Tralnslate?.GetTranslation("Select a TypeInstallation")</option>
+
+                    @foreach (var g in versionTypes)
+                        {
+                        <option value="@g?.CodingValue">@g?.CodingName</option>
+                        }
+                </InputSelect>
+                <ValidationMessage For="@(() => CurrentObject.TypeInstallation)" />
+            </div>
+            <div class="col-md-4">
+                <div class="input-group">
+                    <label for="MobileNo" class="">@Tralnslate?.GetTranslation("MobileNo")</label>
+                    <InputText type="text" id="MobileNo" class="" @bind-Value="CurrentObject.MobileNo" placeholder="@(@Tralnslate?.GetTranslation("Enter MobileNo"))" />
+                    <ValidationMessage For="@(() => CurrentObject.MobileNo)" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-2">
+        <div class="row">
+            <div class="col-md">
+                <div class="input-group">
+                    <label for="Address" class="">@Tralnslate?.GetTranslation("Address")</label>
+                    <InputText type="text" id="Address" class="" @bind-Value="CurrentObject.Address" placeholder="@(@Tralnslate?.GetTranslation("Enter Address"))" />
+                    <ValidationMessage For="@(() => CurrentObject.Address)" />
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="input-group">
+                    <label for="NameOfWork" class="">@Tralnslate?.GetTranslation("NameOfWork")</label>
+                    <InputText type="text" id="NameOfWork" class="" @bind-Value="CurrentObject.NameOfWork" placeholder="@(@Tralnslate?.GetTranslation("Enter NameOfWork"))" />
+                    <ValidationMessage For="@(() => CurrentObject.NameOfWork)" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-2">
+        <div class="row">
+            <div class="col-md">
+                <div class="input-group">
+                    <label for="DatabaseName" class="">@Tralnslate?.GetTranslation("DatabaseName")</label>
+                    <InputText type="text" id="DatabaseName" class="" @bind-Value="CurrentObject.DatabaseName" placeholder="@(@Tralnslate?.GetTranslation("Enter DatabaseName"))" />
+                    <ValidationMessage For="@(() => CurrentObject.DatabaseName)" />
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="input-group">
+                    <label for="SysRank" class="">@Tralnslate?.GetTranslation("SysRank")</label>
+                    <InputText type="text" id="SysRank" class="" @bind-Value="CurrentObject.SysRank" placeholder="@(@Tralnslate?.GetTranslation("Enter SysRank"))" />
+                    <ValidationMessage For="@(() => CurrentObject.SysRank)" />
+                </div>
+            </div>
+        </div>
+    </div>
+    @*<div class="input-group">
+            <label for="inputSerial">@Tralnslate?.GetTranslation("Client Name")</label>
+            <InputText type="text"
+                       id="ClientName"
+                       @bind-Value="CurrentObject.Name"
+                       placeholder="@(@Tralnslate?.GetTranslation("Enter Client Name"))" />
+            <ValidationMessage For="@(() => CurrentObject.Name)" />
+        </div>
+        <div class="input-group">
+            <label for="PhoneNo">@Tralnslate?.GetTranslation("PhoneNo")</label>
+            <InputText type="text" id="PhoneNo" @bind-Value="CurrentObject.PhoneNo" placeholder="@(@Tralnslate?.GetTranslation("+967772644666"))" />
+            <ValidationMessage For="@(() => CurrentObject.PhoneNo)" />
+        </div>
+        <div class="input-group">
+            <label for="WhatsNo" class="form-label">@Tralnslate?.GetTranslation("WhatsNo")</label>
+            <InputText type="text" id="WhatsNo" class="" @bind-Value="CurrentObject.WhatsNo" placeholder="@(@Tralnslate?.GetTranslation("+967772644666"))" />
+            <ValidationMessage For="@(() => CurrentObject.WhatsNo)" />
+        </div>
+        <div class="input-group">
+            <label for="Email">@Tralnslate?.GetTranslation("Email")</label>
+            <InputText type="text" id="Email" class="" @bind-Value="CurrentObject.Email" placeholder="@(@Tralnslate?.GetTranslation("example@gmail.com"))" />
+            <ValidationMessage For="@(() => CurrentObject.Email)" />
+        </div>*@
+
+    <div class="input-group">
+        <label for="Notes" class="">@Tralnslate?.GetTranslation("Notes")</label>
+        <InputText type="text" id="Notes" class="" @bind-Value="CurrentObject.Notes" placeholder="@(@Tralnslate?.GetTranslation("Enter Notes"))" />
+        <ValidationMessage For="@(() => CurrentObject.Notes)" />
+    </div>
+
+    <div class="operation-buttons">
+        <button type="button" class="btn btn-secondary generate-button" @onclick="GoToBackPageAsync">@Tralnslate?.GetTranslation("Close")</button>
+        <button type="submit" class="btn btn-primary generate-button">@modalButtonText</button>
+    </div>
+</EditForm>
+
+    }
+</div>
+
+
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private List<Models.Client> clients = new();
+    private List<Models.SystemType> systemTypes = new();
+    private List<Models.SysVersion> sysVersions = new();
+    private List<Models.Country> countries = new();
+    private List<Models.Governorate> governorates = new();
+    private List<Models.City> cities = new();
+    private List<Data.Coding> licinceTypes = new();
+    private List<Data.Coding> versionTypes = new();
+    protected async override Task OnInitializedAsync()
+    {
+        try
+        {
+            if (Id > 0)
+                CurrentObject = await CurrentService.GetByIdAsync(Id);
+            if (CurrentObject == null)
+            {
+                CurrentObject = new Models.ClientVersion();
+                AddingNew();
+            }
+            if (CurrentObject.ID > 0)
+            {
+                Editing(CurrentObject);
+            }
+            var c = await clientService.GetAllAsync();
+            clients = c?.ToList();
+            var s = await sysTypeService.GetAllAsync();
+            systemTypes = s?.ToList();
+            var v = await sysVersionService.GetAllAsync();
+            sysVersions = v?.ToList();
+            var cr = await countryService.GetAllAsync();
+            countries = cr.ToList();
+            var gov = await governprateService.GetAllAsync();
+            governorates = gov?.ToList();
+            var ct = await cityService.GetAllAsync();
+            cities = ct?.ToList();
+            licinceTypes = codingService.GetAllLicenceTypes();
+            versionTypes = codingService.GetAllInstallationTypes();
+            isModalVisible = true;
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+        }
+        IsLoading = false;
+    }
+    protected override void AddingNew()
+    {
+        CurrentObject = new Models.ClientVersion();
+        modalTitle = Tralnslate?.GetTranslation("Add Client Version");
+        modalButtonText = Tralnslate?.GetTranslation("Add");
+    }
+    protected override void Editing(Models.ClientVersion obj)
+    {
+        base.Editing(obj);
+        CurrentObject = obj;
+        modalTitle = Tralnslate?.GetTranslation("Edit Client Version");
+        modalButtonText = Tralnslate?.GetTranslation("Update");
+    }
+    private bool IsProcessing = false;
+    private async Task SaveData()
+    {
+        try
+        {
+            IsLoading = true;
+            var prvname = CurrentService.GetAll()?.Where(a => a.ClientId == CurrentObject.ClientId && a.ID != CurrentObject.ID)?.FirstOrDefault();
+            if (prvname != null && prvname.ID > 0)
+            {
+                validationMessage = Tralnslate?.GetTranslation("this name of this record is already exist try another name ");
+                return;
+            }
+            else
+            {
+                validationMessage = "";
+            }
+            if (CurrentObject.ID == 0)
+            {
+                CurrentObject.CreatedDate = GetSystemDate();
+                CurrentObject.CreatedUser = await GetUserIdAsync();
+                await CurrentService.AddAsync(CurrentObject);
+            }
+            else
+            {
+                CurrentObject.UpdatedDate = GetSystemDate();
+                CurrentObject.UpdatedUser = await GetUserIdAsync();
+                await CurrentService.UpdateAsync(CurrentObject.ID, CurrentObject);
+            }
+            isModalVisible = false; // Hide the modal
+            IsLoading = true;
+            //await Task.Delay(5000);
+            await GoToBackPageAsync();
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+            validationMessage = ex?.Message;
+        }
+        IsProcessing = false;
+        IsLoading = false;
+    }
+    private void HandleInvalidSubmit()
+    {
+        // This will trigger if the form validation fails.
+        Console.WriteLine("Form submission is invalid.");
+    }
+}

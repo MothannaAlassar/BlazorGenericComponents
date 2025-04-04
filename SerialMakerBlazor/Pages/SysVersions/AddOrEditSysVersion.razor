@@ -1,0 +1,173 @@
+﻿@page "/addeditsysversion/{Id:int}"
+@inherits Components.BaseBasicCertComponent<Models.SysVersion, Models.SysVersion>
+@inject Repositories.IGenericRepo<Models.SystemType> systemTypeService
+<div class="container">
+    <h3 class="text-md-center">@modalTitle</h3>
+    <!-- Add/Edit Modal -->
+
+    @if (IsLoading)
+    {
+        <LoadingSpinner />
+    }
+    else
+    {
+
+<EditForm Model="CurrentObject" OnValidSubmit="SaveData" OnInvalidSubmit="HandleInvalidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="mb-3">
+        <div class="">
+            @if (!string.IsNullOrEmpty(validationMessage))
+            {
+                <p style="color: red;">@validationMessage</p>
+            }
+        </div>
+    </div>
+    @*<div class="input-group-edit-form">
+            <label for="Name">@Tralnslate?.GetTranslation("Name")</label>
+            <input type="text" id="Name" @bind="CurrentObject.Name" />
+            <ValidationMessage For="@(() => CurrentObject.Name)" />
+        </div>*@
+    <div class="input-group">
+        <label for="VersionName">@Tralnslate?.GetTranslation("VersionName")</label>
+        <InputText type="text"
+                   @bind-Value="CurrentObject.VersionName"
+                   placeholder="@(@Tralnslate?.GetTranslation("Enter VersionName"))" />
+        <ValidationMessage For="@(() => CurrentObject.VersionName)" />
+    </div>
+    <div class="input-group">
+        <label for="VersionNumber">@Tralnslate?.GetTranslation("VersionNumber")</label>
+        <InputText type="text"
+                   @bind-Value="CurrentObject.VersionNumber"
+                   placeholder="@(@Tralnslate?.GetTranslation("Enter VersionNumber"))" />
+        <ValidationMessage For="@(() => CurrentObject.VersionNumber)" />
+    </div>
+    <div class="input-group">
+        <label for="VersionDate">@Tralnslate?.GetTranslation("VersionDate")</label>
+        <InputDate @bind-Value="CurrentObject.VersionDate" />
+        <ValidationMessage For="@(() => CurrentObject.VersionDate)" />
+    </div>
+    <div class="mb-3">
+        <label class="items-start">@Tralnslate?.GetTranslation("SystemType")</label>
+        <InputSelect id="SystemType" class="form-select form-control" @bind-Value="CurrentObject.SystemTypeId">
+
+            <option value="">@Tralnslate?.GetTranslation("Select System")</option>
+            @foreach (var un in systemTypes)
+                {
+                <option value="@un.ID">@un.SysName</option>
+                }
+        </InputSelect>
+        <ValidationMessage For="@(() => CurrentObject.SystemTypeId)" />
+    </div>
+
+    @*<div class="input-group">
+        <label for="Notes">@Tralnslate?.GetTranslation("Notes")</label>
+        <InputTextArea type="text" id="Notes" @bind-Value="CurrentObject.Notes" placeholder="@(@Tralnslate?.GetTranslation("Enter Notes"))" />
+        <ValidationMessage For="@(() => CurrentObject.Notes)" />
+    </div>*@
+    <div class="input-group">
+        <label for="Notes">@Tralnslate?.GetTranslation("Notes")</label>
+        <InputTextArea
+                   @bind-Value="CurrentObject.Notes"
+                   placeholder="@(@Tralnslate?.GetTranslation("Enter Notes"))" />
+        <ValidationMessage For="@(() => CurrentObject.Notes)" />
+    </div>
+    <div class="operation-buttons">
+        <button type="button" class="btn btn-secondary generate-button" @onclick="GoToBackPageAsync">@Tralnslate?.GetTranslation("Close")</button>
+        <button type="submit" class="btn btn-primary generate-button">@modalButtonText</button>
+    </div>
+</EditForm>
+
+    }
+</div>
+
+
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private List<Models.SystemType> systemTypes = new();
+    protected async override Task OnInitializedAsync()
+    {
+        try
+        {
+            if (Id > 0)
+                CurrentObject = await CurrentService.GetByIdAsync(Id);
+            if (CurrentObject == null)
+            {
+                CurrentObject = new Models.SysVersion();
+                AddingNew();
+            }
+            if (CurrentObject.ID > 0)
+            {
+                Editing(CurrentObject);
+            }
+            var sys = await systemTypeService.GetAllAsync();
+            systemTypes = sys?.ToList();
+            isModalVisible = true;
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+        }
+        IsLoading = false;
+    }
+    protected override void AddingNew()
+    {
+        CurrentObject = new Models.SysVersion();
+        modalTitle = Tralnslate?.GetTranslation("Add System Version");
+        modalButtonText = Tralnslate?.GetTranslation("Add");
+    }
+    protected override void Editing(Models.SysVersion obj)
+    {
+        base.Editing(obj);
+        CurrentObject = obj;
+        modalTitle = Tralnslate?.GetTranslation("Edit System Version");
+        modalButtonText = Tralnslate?.GetTranslation("Update");
+    }
+    private bool IsProcessing = false;
+    private async Task SaveData()
+    {
+        try
+        {
+            IsLoading = true;
+            var prvname = CurrentService.GetAll()?.Where(a => a.VersionName.Trim() == CurrentObject.VersionName.Trim() && a.ID != CurrentObject.ID)?.FirstOrDefault();
+            if (prvname != null && prvname.ID > 0)
+            {
+                validationMessage = Tralnslate?.GetTranslation("this name of this record is already exist try another name ");
+                return;
+            }
+            else
+            {
+                validationMessage = "";
+            }
+            if (CurrentObject.ID == 0)
+            {
+                CurrentObject.CreatedDate = GetSystemDate();
+                CurrentObject.CreatedUser = await GetUserIdAsync();
+                await CurrentService.AddAsync(CurrentObject);
+            }
+            else
+            {
+                CurrentObject.UpdatedDate = GetSystemDate();
+                CurrentObject.UpdatedUser = await GetUserIdAsync();
+                await CurrentService.UpdateAsync(CurrentObject.ID, CurrentObject);
+            }
+            isModalVisible = false; // Hide the modal
+            IsLoading = true;
+
+            await GoToBackPageAsync();
+        }
+        catch (Exception ex)
+        {
+            AddErrorLog(ex);
+            validationMessage = ex?.Message;
+        }
+        IsProcessing = false;
+        IsLoading = false;
+    }
+    private void HandleInvalidSubmit()
+    {
+        // This will trigger if the form validation fails.
+        Console.WriteLine("Form submission is invalid.");
+    }
+}

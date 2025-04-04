@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Components
+@code {
+    private string searchQuery;
+    [Parameter] public string SearchVal { get; set; }
+    [Parameter] public EventCallback<bool> OnSearch { get; set; }
+    private void Search() => OnSearch.InvokeAsync(true);
+}
+
+<div class="search-container">
+    <form class="form-inline my-2 my-lg-0" @onsubmit="Search">
+        <input class="form-control mr-sm-2"
+               type="search"
+               placeholder="Search..."
+               aria-label="Search"
+               @bind="searchQuery"
+               required />
+        <button class="btn btn-outline-success my-2 my-sm-0"
+                type="submit">
+            Search
+        </button>
+    </form>
+</div>
+
+<style>
+    .search-container {
+        margin: 20px;
+    }
+</style>

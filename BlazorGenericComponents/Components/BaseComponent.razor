@@ -1,0 +1,96 @@
+﻿@inject Services.ILanguageService languageService
+@inject Services.ILoggerService loggerService
+
+@inject NavigationManager navigationManager
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.AspNetCore.Http;
+@inject IHttpContextAccessor HttpContextAccessor
+<h3>BaseComponent</h3>
+
+@code {
+
+    protected bool IsToastMessageVisible { get; set; } = true;
+    protected Services.ILanguageService Tralnslate => languageService;
+    protected string validationMessage { get; set; } = "";
+    private string selectedLanguage;
+    protected NavigationManager Navigation => navigationManager;
+    protected string SelectedLanguage { get => selectedLanguage; }
+    //here permession fields
+    protected bool CanAdd { get; set; } = false;
+    protected bool CanEdit { get; set; } = false;
+    protected bool CanDelete { get; set; } = false;
+    protected bool CanView { get; set; } = false;
+    protected virtual string PageName { get; set; }
+    protected Helpers.MessageType MessageType { get; set; } = Helpers.MessageType.Default;
+   
+    
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            // Load the selected language here using JS interop
+            //Tralnslate = languageService;
+            //CodingService = codingService;
+            await LoadLanguage();
+            StateHasChanged(); // Refresh the UI
+        }
+        // isLoading = false;
+    }
+    private async Task LoadLanguage()
+    {
+        var selectedLang = await languageService.GetSelectedLanguageAsync() ?? "en";
+        selectedLanguage = selectedLang;
+        await languageService.LoadLanguageFileAsync(selectedLang);
+        // await LanguageService.SetSelectedLanguageAsync(selectedLanguage); // Save the selected language
+    }
+    protected void AddErrorLog(Exception ex)
+    {
+        loggerService.AddErrorLog(ex);
+        validationMessage = ex?.Message + " ### " + ex?.InnerException?.Message;
+        MessageType = MessageType.Error;
+    }
+    
+    protected void NavigateToWithBaseUrl(string pageurl, bool forceLoad)
+    {
+
+        // Get the full URL
+        var uri = navigationManager.ToAbsoluteUri(navigationManager.Uri);
+
+        // Get the base URI (protocol + host)
+        var baseUri = $"{uri.Scheme}://{uri.Host}";
+
+        // Get the path (everything after the base URI)
+        var path = uri.AbsolutePath.TrimStart('/');
+
+        // Get the query string (if any)
+        var queryString = uri.Query;
+
+        var baseUrl = navigationManager.BaseUri.TrimEnd('/');
+        var curnurl = navigationManager.Uri.TrimEnd('/');
+        var returnurl = path;
+        //if (string.IsNullOrEmpty(returnurl))
+        //    returnurl = "";
+        if (pageurl.StartsWith("/"))
+            pageurl = pageurl.TrimStart('/');
+        var lgiurl = $"{baseUrl}/{pageurl}";
+        navigationManager.NavigateTo(lgiurl, forceLoad);
+    }
+    protected bool IsInRole(string roleName)
+    {
+        var rtv = HttpContextAccessor.HttpContext.User.IsInRole(roleName);
+        return rtv;
+    }
+
+    protected bool IsAdimin => IsInRole("Admin");
+    protected bool IsManager => IsInRole("Manager");
+    protected bool IsAccountant => IsInRole("Accountant");
+    protected DateTime GetSystemDate()
+    {
+        return DateTime.Now;
+    }
+    protected DateTime GetMinIntervalDate()
+    {
+        return DateTime.Now;
+    }
+   
+}

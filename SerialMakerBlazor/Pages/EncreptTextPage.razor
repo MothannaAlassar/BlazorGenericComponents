@@ -1,0 +1,141 @@
+﻿@page "/encrepttext"
+@attribute [Authorize]
+@inject IJSRuntime JSRuntime
+@inject Services.EncryptionService EncryptionService // Inject your Encryption service
+@using System.IO
+<div class="container">
+    <h3>Encrept Text</h3>
+    <EditForm Model="generateSerial" OnValidSubmit="GenerateSerial">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="input-group">
+            <label for="inputSerial">Enter Text To Encrept:</label>
+            <textarea type="text"
+                      id="inputSerial"
+                      @bind="generateSerial.EncreptText"
+                      placeholder="Entry text" />
+            <ValidationMessage For="@(()=>generateSerial.EncreptText)" />
+        </div>
+        <div>
+            <InputFile type="file" class="generate-button" OnChange="ReadFile" />
+        </div>
+        @*<button type="button" class="generate-button">Read from File</button>*@
+        <button type="submit" class="generate-button">Encrept</button>
+
+    </EditForm>
+
+    <div class="input-group">
+        <label for="outputSerial">Decrept Text:</label>
+        <textarea type="text"
+                  id="outputSerial"
+                  @bind="generateSerial.DecreptText"
+                  placeholder="Result" />
+    </div>
+    <button type="button" @onclick="SaveToFile" class="generate-button">Save Text</button>
+</div>
+
+<style>
+
+
+    .container {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        color: #333;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    textarea {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        height: 200px;
+    }
+
+    input:disabled {
+        background-color: #e9ecef;
+    }
+
+    .generate-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+    }
+
+        .generate-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+@code {
+    private ViewModels.EncreptTextViewModel generateSerial = new();
+    private string inputSerial;
+    private string generatedSerial;
+    private string selectedFilePath;
+    protected override Task OnInitializedAsync()
+    {
+        return base.OnInitializedAsync();
+    }
+    //private async Task ReadFile(ChangeEventArgs e)
+    //{
+    //    // Ensure a file is selected
+    //    if (e.Value is not null && e.Value is IReadOnlyList<IBrowserFile> files)
+    //    {
+    //        var file = files.FirstOrDefault();
+    //        if (file is not null)
+    //        {
+    //            using var stream = file.OpenReadStream();
+    //            using var reader = new StreamReader(stream);
+    //            generateSerial.EncreptText = await reader.ReadToEndAsync();
+    //        }
+    //        StateHasChanged();
+    //    }
+    //}
+    private async Task ReadFile(InputFileChangeEventArgs e)
+    {
+        // Ensure a file is selected
+        var file = e.File;
+        if (file is not null)
+        {
+            using var stream = file.OpenReadStream();
+            using var reader = new StreamReader(stream);
+
+            generateSerial.EncreptText = await reader.ReadToEndAsync();
+            selectedFilePath = "";
+        }
+    }
+    private void GenerateSerial()
+    {
+        var st = generateSerial?.EncreptText;
+        generatedSerial = Services.EncryptionService.EncRypt(st); // Example identifier
+        generateSerial.DecreptText = generatedSerial;
+    }
+
+    private string textContent = string.Empty;
+
+    private async Task SaveToFile()
+    {
+        if (!string.IsNullOrWhiteSpace(generateSerial.DecreptText))
+        {
+            var fileName = "myTextFile.txt";
+            await JSRuntime.InvokeVoidAsync("saveToFile", fileName, textContent);
+        }
+    }
+}

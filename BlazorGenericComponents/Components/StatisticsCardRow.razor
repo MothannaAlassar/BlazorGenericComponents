@@ -1,0 +1,78 @@
+﻿
+@inject NavigationManager navigat
+
+<div class="statistics-card-row">
+    <div class="statistics-card-heading">
+        <h4>@Title</h4>
+    </div>
+    <div class="row">
+        @if (CardItems != null && CardItems.Count > 0)
+        {
+            int cont = 1;
+            
+            foreach (var itm in CardItems)
+            {
+                <div class="col-lg-3 col-xs-6">
+                <div class="statistics-card-box">
+                    <div class="statistics-bg-@cont">
+                        @if (!string.IsNullOrEmpty(itm.Link))
+                        {
+                            <div class="small-box small-box-custom" style="cursor:pointer;" @onclick="@(()=>{navigat.NavigateTo(itm.Link);})">
+                                @if (!string.IsNullOrEmpty(itm.FontSize))
+                                {
+                                    <div style="font-size:@itm.FontSize" class="static-counter-title">
+                                        @itm.Value
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="static-counter-title">
+                                        @itm.Value
+                                    </div>
+                                }
+
+
+                                <div class="static-counter-num">@itm.Name</div>
+                            </div>
+                        }
+                        else
+                        {
+                            <div class="small-box small-box-custom">
+                                @if (!string.IsNullOrEmpty(itm.FontSize))
+                                {
+                                    <div style="font-size:@itm.FontSize" class="static-counter-title">
+                                        @itm.Value
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="static-counter-title">
+                                        @itm.Value
+                                    </div>
+                                }
+
+
+                                <div class="static-counter-num">@itm.Name</div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+               </div>
+                if(cont>=3)
+                {
+                    cont = 0;
+                }
+                cont++;
+            }
+           
+        }
+    </div>
+</div>
+
+@code {
+    [Parameter] public List<ViewModels.CardViewModel> CardItems { get; set; }
+    [Parameter] public string Title { get; set; }
+
+   
+}

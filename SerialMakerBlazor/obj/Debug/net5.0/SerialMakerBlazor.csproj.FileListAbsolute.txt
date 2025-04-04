@@ -1,0 +1,306 @@
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.csproj.AssemblyReference.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.GeneratedMSBuildEditorConfig.editorconfig
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.AssemblyInfoInputs.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.AssemblyInfo.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.csproj.CoreCompileInputs.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.MvcApplicationPartsAssemblyInfo.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.MvcApplicationPartsAssemblyInfo.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorComponent.input.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Components\BaseBasicCertComponent.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Clients\AddOrUpdateClient.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Clients\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\EncreptTextPage.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\MainSerialPage.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SpinnerDemo.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SystemTypes\AddOrEditSystemTypes.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SystemTypes\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SysVersions\AddOrEditSysVersion.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SysVersions\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\TrailSerialPage.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\BaseLayout.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\LoginDisplay.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu_2.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorComponent.output.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\SerialMakerBlazor.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.TagHelpers.input.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.TagHelpers.output.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorCoreGenerate.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\App.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Components\BaseBasicCertComponent.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Clients\AddOrUpdateClient.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Clients\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\EncreptTextPage.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\MainSerialPage.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SpinnerDemo.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SystemTypes\AddOrEditSystemTypes.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SystemTypes\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SysVersions\AddOrEditSysVersion.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SysVersions\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\TrailSerialPage.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\BaseLayout.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\LoginDisplay.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\NavMenu_2.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\LogOut.cshtml.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Shared\_LoginPartial.cshtml.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\_Host.cshtml.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorAssemblyInfo.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorAssemblyInfo.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.Views.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.Views.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.deps.json
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.runtimeconfig.json
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.runtimeconfig.dev.json
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.StaticWebAssets.xml
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.exe
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\appsettings.Development.json
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\appsettings.json
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.StaticWebAssets.xml
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.exe
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.deps.json
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.runtimeconfig.json
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.runtimeconfig.dev.json
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\ref\SerialMakerBlazor.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.Views.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.Views.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Humanizer.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\Newtonsoft.Json.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\NLog.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\System.Runtime.Caching.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\staticwebassets\SerialMakerBlazor.StaticWebAssets.Manifest.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\staticwebassets\SerialMakerBlazor.StaticWebAssets.xml
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\Shared\NavMenu_2.razor.rz.scp.css
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\bundle\SerialMakerBlazor.styles.css
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\projectbundle\SerialMakerBlazor.bundle.scp.css
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorTargetAssemblyInfo.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorTargetAssemblyInfo.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.Views.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.csproj.CopyComplete
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\ref\SerialMakerBlazor.dll
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.pdb
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.genruntimeconfig.cache
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\ClientVersions\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\ClientVersions\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\ClientVersions\AddOrUpdate.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\ClientVersions\AddOrUpdate.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\ClientMachines\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\ClientMachines\Index.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\ClientMachines\AddOrUpdate.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\ClientMachines\AddOrUpdate.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\RedirectToLogin.razor.g.cs
+E:\SharedApps\GitHub\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\RedirectToLogin.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\appsettings.Development.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\appsettings.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.Views.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.Views.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.deps.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.runtimeconfig.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.runtimeconfig.dev.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.StaticWebAssets.xml
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.exe
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.StaticWebAssets.xml
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.exe
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.deps.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.runtimeconfig.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.runtimeconfig.dev.json
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\ref\SerialMakerBlazor.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.Views.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\SerialMakerBlazor.Views.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Humanizer.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.Views.V4.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.UI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Extensions.FileProviders.Embedded.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\Newtonsoft.Json.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\NLog.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\System.Runtime.Caching.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\bin\Debug\net5.0\BlazorGenericComponents.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.csproj.AssemblyReference.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.GeneratedMSBuildEditorConfig.editorconfig
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.AssemblyInfoInputs.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.AssemblyInfo.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.csproj.CoreCompileInputs.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.MvcApplicationPartsAssemblyInfo.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.MvcApplicationPartsAssemblyInfo.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorComponent.input.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\App.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Components\BaseBasicCertComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\ClientMachines\AddOrUpdate.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\ClientMachines\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Clients\AddOrUpdateClient.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Clients\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\ClientVersions\AddOrUpdate.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\ClientVersions\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Counter.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\EncreptTextPage.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\FetchData.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\Login.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\MainSerialPage.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SpinnerDemo.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SystemTypes\AddOrEditSystemTypes.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SystemTypes\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SysVersions\AddOrEditSysVersion.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\SysVersions\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Pages\TrailSerialPage.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\BaseLayout.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\LoginDisplay.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\RedirectToLogin.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\SurveyPrompt.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\_Imports.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\MainLayout.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\Shared\NavMenu_2.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorComponent.output.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\RazorDeclaration\SerialMakerBlazor.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.TagHelpers.input.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.TagHelpers.output.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorCoreGenerate.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\App.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Components\BaseBasicCertComponent.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\ClientMachines\AddOrUpdate.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\ClientMachines\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Clients\AddOrUpdateClient.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Clients\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\ClientVersions\AddOrUpdate.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\ClientVersions\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Counter.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\EncreptTextPage.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\FetchData.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Login.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\MainSerialPage.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SpinnerDemo.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SystemTypes\AddOrEditSystemTypes.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SystemTypes\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SysVersions\AddOrEditSysVersion.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\SysVersions\Index.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\TrailSerialPage.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\BaseLayout.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\LoginDisplay.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\RedirectToLogin.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\SurveyPrompt.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\_Imports.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\MainLayout.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\NavMenu.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Shared\NavMenu_2.razor.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\LogOut.cshtml.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Shared\_LoginPartial.cshtml.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\Razor\Pages\_Host.cshtml.g.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorAssemblyInfo.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorAssemblyInfo.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\staticwebassets\SerialMakerBlazor.StaticWebAssets.Manifest.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\staticwebassets\SerialMakerBlazor.StaticWebAssets.xml
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\Shared\MainLayout.razor.rz.scp.css
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\Shared\NavMenu.razor.rz.scp.css
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\Shared\NavMenu_2.razor.rz.scp.css
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\bundle\SerialMakerBlazor.styles.css
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\scopedcss\projectbundle\SerialMakerBlazor.bundle.scp.css
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorTargetAssemblyInfo.cache
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.RazorTargetAssemblyInfo.cs
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.Views.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.csproj.CopyComplete
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\ref\SerialMakerBlazor.dll
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.pdb
+F:\Mothanna alassar\BlazorGenericComponents\BlazorGenericComponents\SerialMakerBlazor\obj\Debug\net5.0\SerialMakerBlazor.genruntimeconfig.cache

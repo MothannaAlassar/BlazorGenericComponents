@@ -1,0 +1,128 @@
+﻿
+@typeparam TItem
+@using System.Reflection
+@inherits Components.BaseComponent
+<div class="">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h5>@Tralnslate?.GetTranslation("Filter Items")</h5>
+        <button class="btn btn-outline-secondary" @onclick="ToggleQueryBuilder">
+            @if (showQueryBuilder)
+            {
+                <span> @Tralnslate?.GetTranslation("Hide") </span>
+            }
+            else
+            {
+                <span>@Tralnslate?.GetTranslation("Show")</span>
+            }
+        </button>
+    </div>
+    @if (showQueryBuilder)
+    {
+        <div class="card-body">
+            <div class="query-builder-container">
+                <h3>@Tralnslate?.GetTranslation("Query Builder")</h3>
+                @foreach (var query in queries)
+                {
+                    <div class="input-group">
+                        <select @bind="query.Field" class="form-select">
+                            @foreach (var field in GetPropertyNames())
+                            {
+                                <option value="@field">@Tralnslate?.GetTranslation(field)</option>
+                            }
+                        </select>
+                        <select @bind="query.Operator" class="form-select">
+                            <option value="=">=</option>
+                            <option value="!=">!=</option>
+                            <option value=">">></option>
+                            <option value="<">@les</option>
+                            <option value="LIKE">LIKE</option>
+                        </select>
+                        @if (GetType(query.Field) == typeof(DateTime?) || GetType(query.Field) == typeof(DateTime))
+                        {
+                            query.Value = DateTime.Now.ToString();
+                            <input type="datetime" @bind="query.Value" class="form-control" />
+
+                        }
+                        else if (GetType(query.Field) == typeof(int?) || GetType(query.Field) == typeof(int))
+                        {
+                            <input type="number" placeholder="Value" @bind="query.Value" class="form-control" />
+                        }
+                        else
+                        {
+                            <input placeholder="Value" @bind="query.Value" class="form-control" />
+                        }
+
+                        <button class="btn btn-danger" @onclick="() => RemoveQuery(query)">@Tralnslate?.GetTranslation("Remove")</button>
+                    </div>
+                }
+                <div class="d-flex justify-content-between mt-3">
+                    <button class="btn btn-primary" @onclick="AddQuery">@Tralnslate?.GetTranslation("Add Query")</button>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between mt-3">
+                <button class="btn btn-success" @onclick="ExecuteFilter">@Tralnslate?.GetTranslation("Execute Query")</button>
+                <button class="btn btn-warning" @onclick="ClearFilter">@Tralnslate?.GetTranslation("Clear Filter")</button>
+            </div>
+        </div>
+    }
+</div>
+@code {
+    //[Parameter] public QueryBuilder<TItem> QueryBuilder { get; set; }
+    [Parameter] public EventCallback<bool> OnClearFilter { get; set; }
+    [Parameter] public EventCallback<bool> OnExecuteFilter { get; set; }
+    private void ExecuteFilter() => OnExecuteFilter.InvokeAsync(true);
+    private void ClearFilter() => OnClearFilter.InvokeAsync(false);
+
+    private bool showQueryBuilder = false;
+
+
+
+    //here copy code from Query builder
+    private string les = "<";
+    public class QueryF
+    {
+        public string Field { get; set; } = string.Empty;
+        public string Operator { get; set; } = string.Empty;
+        public string Value { get; set; } = string.Empty;
+    }
+
+
+    private List<QueryF> queries = new List<QueryF>();
+
+    private void AddQuery()
+    {
+        queries.Add(new QueryF());
+    }
+    private void RemoveQuery(QueryF query)
+    {
+        queries.Remove(query);
+    }
+    public IEnumerable<QueryF> GetQueries() => queries;
+
+    public void ClearQueries() // Method to clear all queries
+    {
+        queries.Clear();
+    }
+
+    private IEnumerable<string> GetPropertyNames()
+    {
+
+        return typeof(TItem).GetProperties(BindingFlags.Public | BindingFlags.Instance)
+        .Select(prop => prop.Name);
+    }
+    private Type GetType(string name)
+    {
+        var t = typeof(TItem).GetProperties(BindingFlags.Public | BindingFlags.Instance)?.Where(a => a.Name == name)
+        .Select(prop => prop.PropertyType)?.FirstOrDefault();
+        return t;
+    }
+    //end copy code from Query builder
+
+
+
+    private void ToggleQueryBuilder()
+    {
+        showQueryBuilder = !showQueryBuilder; // Toggle visibility
+    }
+}

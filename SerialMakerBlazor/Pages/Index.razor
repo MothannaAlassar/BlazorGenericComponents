@@ -1,0 +1,14 @@
+﻿@page "/"
+@attribute [Authorize]
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+<ToggleDisplayCompo >
+    <Content>
+        <h2>This is the toggled content!</h2>
+        <p>You can include any Blazor components or HTML here.</p>
+    </Content>
+</ToggleDisplayCompo>

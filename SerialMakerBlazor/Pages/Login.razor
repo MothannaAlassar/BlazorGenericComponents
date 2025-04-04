@@ -1,0 +1,121 @@
+﻿@page "/login"
+
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+@using System.Net.Http.Json;
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<Data.AppUser> SignInManager
+@inject NavigationManager Navigation
+
+<h3 class="text-center">Login</h3>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-header text-center">
+                    <h5>Welcome Back!</h5>
+                </div>
+                <div class="card-body">
+                    <EditForm Model="@loginModel" OnValidSubmit="@LoginAsync">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <InputText id="email" class="form-control" @bind-Value="loginModel.Email" />
+                            <ValidationMessage For="@(() => loginModel.Email)" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <InputText id="password" type="password" class="form-control" @bind-Value="loginModel.Password" />
+                            <ValidationMessage For="@(() => loginModel.Password)" />
+                        </div>
+                        <div class="form-group form-check">
+                            <InputCheckbox id="rememberMe" class="form-check-input" @bind-Value="loginModel.RememberMe" />
+                            <label class="form-check-label" for="rememberMe">Remember Me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </EditForm>
+                    @if (!string.IsNullOrEmpty(errorMessage))
+                    {
+                        <div class="alert alert-danger mt-3">@errorMessage</div>
+                    }
+                    <div class="text-center mt-3">
+                        <a href="/register">Don't have an account? Register here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+    private string errorMessage;
+    private bool isLoading = false;
+    private async Task LoginAsync()
+    {
+        try
+        {
+            isLoading = true;
+            errorMessage = "";
+            var navi = Navigation.BaseUri;
+            navi = navi.TrimEnd('/');
+            var baseUrl = navi;
+            var response = await Http.PostAsJsonAsync($"{navi}/api/account/Login", loginModel);
+            //var result = await response.Content.ReadFromJsonAsync<Data.AppUser>();
+            // Get the reportId
+            if (response.IsSuccessStatusCode)
+            {
+                Navigation.NavigateTo(baseUrl);
+            }
+            else
+            {
+                // Set an error message for invalid login attempts
+                //errorMessage = $"Invalid login attempt. Please try again.{response?.RequestMessage} ## {response?.Content?.ToString()}";
+                errorMessage = $"Invalid login attempt. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
+        isLoading = false;
+
+    }
+    private async Task HandleLogin()
+    {
+        try
+        {
+            var result = await SignInManager.PasswordSignInAsync(
+                loginModel.Email,
+                loginModel.Password,
+                loginModel.RememberMe,
+                lockoutOnFailure: false);
+
+            if (result.Succeeded)
+            {
+                Navigation.NavigateTo("/");
+            }
+            else
+            {
+                // Set an error message for invalid login attempts
+                errorMessage = "Invalid login attempt. Please try again.";
+            }
+        }
+        catch (Exception ex)
+        {
+            // Handle the exception and log it
+            errorMessage = $"An error occurred: {ex.Message}";
+            Console.Error.WriteLine($"Login error: {ex}");
+        }
+    }
+
+    public class LoginModel
+    {
+        public string Email { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
+        public bool RememberMe { get; set; } = false;
+    }
+}
